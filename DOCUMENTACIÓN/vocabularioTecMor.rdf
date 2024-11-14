@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<!DOCTYPE rdf:RDF [<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">]>
+
+<rdf:RDF 
+     xmlns:rdf   ="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs  ="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:tecmor="http://www.itmorelia.edu.mx/curso#"
+	   xml:base    ="http://www.itmorelia.edu.mx/curso#"
+	 >
+
+<rdfs:Class rdf:about="http://www.itmorelia.edu.mx/curso#Personal">
+</rdfs:Class>
+ 
+<rdfs:Class rdf:about="http://www.itmorelia.edu.mx/curso#Administrativo">
+    <rdfs:subClassOf rdf:resource="#Personal"/>
+</rdfs:Class>
+
+<rdfs:Class rdf:about="http://www.itmorelia.edu.mx/curso#Docente">
+    <rdfs:subClassOf rdf:resource="#Personal"/>
+</rdfs:Class>
+
+<rdfs:Class rdf:about="http://www.itmorelia.edu.mx/curso#Asignatura">
+    <rdfs:subClassOf rdf:resource="#Docente"/>
+</rdfs:Class>
+
+<rdfs:Class rdf:about="http://www.itmorelia.edu.mx/curso#Carrera">
+    <rdfs:subClassOf rdf:resource="#Docente"/>
+</rdfs:Class>
+
+<rdfs:Class rdf:about="http://www.itmorelia.edu.mx/curso#Investigador">
+    <rdfs:subClassOf rdf:resource="#Personal"/>
+</rdfs:Class>
+
+
+<!-- ***************** propiedades ************************* -->
+
+<rdf:Property rdf:about="http://www.itmorelia.edu.mx/curso#tiene_clave">
+     <rdfs:domain rdf:resource="#Personal"/>
+     <rdfs:range  rdf:resource="&xsd;string"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://www.itmorelia.edu.mx/curso#jefe">
+     <rdfs:domain rdf:resource="#Personal"/>
+     <rdfs:range  rdf:resource="#Personal"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://www.itmorelia.edu.mx/curso#horas_descarga">
+     <rdfs:domain rdf:resource="#Carrera"/>
+     <rdfs:range  rdf:resource="&xsd;integer"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://www.itmorelia.edu.mx/curso#categoria">
+     <rdfs:domain rdf:resource="#Personal"/>
+     <rdfs:range  rdf:resource="&xsd;string"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://www.itmorelia.edu.mx/curso#horas_nombramiento">
+     <rdfs:domain rdf:resource="#Asignatura"/>
+     <rdfs:range  rdf:resource="&xsd;integer"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="http://www.itmorelia.edu.mx/curso#salario">
+     <rdfs:domain rdf:resource="#Personal"/>
+     <rdfs:range  rdf:resource="&xsd;double"/>
+</rdf:Property>
+
+<!-- ***************** instancias ************************* -->
+ <rdf:Description rdf:about="#Ing Jose Maria">
+      <rdf:type rdf:resource="#Carrera"/>
+  	 <tecmor:horas_descarga>8</tecmor:horas_descarga>  
+      <tecmor:jefe rdf:resource="#Ing_Juan_Carlos"/>
+ </rdf:Description>
+
+  <rdf:Description rdf:about="#Ing Hector Oceguera">
+      <rdf:type rdf:resource="#Administrativo"/>
+	 <tecmor:clave>200500</tecmor:clave>  
+      <tecmor:jefe rdf:resource="#Ing_Nicolas"/> 
+	 <tecmor:categoria>A234234</tecmor:categoria>  
+  </rdf:Description>
+  
+  <rdf:Description rdf:about="#Ing Cesar Perez Barajas">
+      <rdf:type rdf:resource="#Carrera"/>
+	 <tecmor:salario>120000</tecmor:salario>  
+      <tecmor:jefe rdf:resource="#Ing_Nicolas"/>   	   
+  </rdf:Description>
+  
+  
+
+</rdf:RDF>

@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE rdf:RDF [<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">]>
+
+<rdf:RDF 
+     xmlns:rdf   ="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs  ="http://www.w3.org/2000/01/rdf-schema#"
+     xml:base    ="http://www.proyecto.com/biblioteca#">
+
+<!-- Clases de la biblioteca -->
+<rdfs:Class rdf:about="http://www.proyecto.com/biblioteca#Libro"/>
+<rdfs:Class rdf:about="http://www.proyecto.com/biblioteca#Prestamo"/>
+<rdfs:Class rdf:about="http://www.proyecto.com/biblioteca#Usuario"/>
+
+
+<!-- Propiedades de la clase Libro -->
+<rdf:Property rdf:about="#codigoLibro">
+    <rdfs:domain rdf:resource="#Libro"/>
+    <rdfs:range rdf:resource="&xsd;integer"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="#nombreLibro">
+    <rdfs:domain rdf:resource="#Libro"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="#editorial">
+    <rdfs:domain rdf:resource="#Libro"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="#autor">
+    <rdfs:domain rdf:resource="#Libro"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="#genero">
+    <rdfs:domain rdf:resource="#Libro"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="#paisAutor">
+    <rdfs:domain rdf:resource="#Libro"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="#numeroPaginas">
+    <rdfs:domain rdf:resource="#Libro"/>
+    <rdfs:range rdf:resource="&xsd;integer"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="#anioEdicion">
+    <rdfs:domain rdf:resource="#Libro"/>
+    <rdfs:range rdf:resource="&xsd;date"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="#precioLibro">
+    <rdfs:domain rdf:resource="#Libro"/>
+    <rdfs:range rdf:resource="&xsd;double"/>
+</rdf:Property>
+
+
+<!-- Propiedades de la clase Prestamo -->
+<rdf:Property rdf:about="#numeroPedido">
+    <rdfs:domain rdf:resource="#Prestamo"/>
+    <rdfs:range rdf:resource="&xsd;integer"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="#codigoLibro">
+    <rdfs:domain rdf:resource="#Prestamo"/>
+    <rdfs:range rdf:resource="&xsd;integer"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="#codigoUsuario">
+    <rdfs:domain rdf:resource="#Prestamo"/>
+    <rdfs:range rdf:resource="&xsd;integer"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="#fechaSalida">
+    <rdfs:domain rdf:resource="#Prestamo"/>
+    <rdfs:range rdf:resource="&xsd;dateTime"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="#fechaMaxima">
+    <rdfs:domain rdf:resource="#Prestamo"/>
+    <rdfs:range rdf:resource="&xsd;dateTime"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="#fechaDevolucion">
+    <rdfs:domain rdf:resource="#Prestamo"/>
+    <rdfs:range rdf:resource="&xsd;dateTime"/>
+</rdf:Property>
+
+
+<!-- Propiedades de la clase Usuario -->
+<rdf:Property rdf:about="#codigoUsuario">
+    <rdfs:domain rdf:resource="#Usuario"/>
+    <rdfs:range rdf:resource="&xsd;integer"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="#nombre">
+    <rdfs:domain rdf:resource="#Usuario"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="#apellidos">
+    <rdfs:domain rdf:resource="#Usuario"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="#noIdentificacion">
+    <rdfs:domain rdf:resource="#Usuario"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="#domicilio">
+    <rdfs:domain rdf:resource="#Usuario"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="#estado">
+    <rdfs:domain rdf:resource="#Usuario"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="#municipio">
+    <rdfs:domain rdf:resource="#Usuario"/>
+    <rdfs:range rdf:resource="&xsd;string"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="#fechaNacimiento">
+    <rdfs:domain rdf:resource="#Usuario"/>
+    <rdfs:range rdf:resource="&xsd;dateTime"/>
+</rdf:Property>
+
+</rdf:RDF>

@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+
+<!--
+Electronicos[nombre]
+  Marca [nombreMarca,fundada,nacionalidad]
+  Estereo [tipo]
+  Television  [marca,existencia,precio,modelo,refresco,
+                color,resolucion,smart,diagonal]
+     Plana [angulo]
+       Plasma
+       LED 
+       LCD
+     Curva [radio]
+-->
+
+<!DOCTYPE rdf:RDF [<!ENTITY xsd "http://www.w3.org/2001/XMLSchema#">]>
+
+<rdf:RDF 
+     xmlns:rdf   ="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:rdfs  ="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:tecmor="http://www.itmorelia.edu.mx/taller#"
+	 xml:base    ="http://www.itmorelia.edu.mx/taller#"
+	 >
+
+<rdfs:Class rdf:about="http://www.itmorelia.edu.mx/taller#Electronicos">
+</rdfs:Class>
+ 
+<rdfs:Class rdf:about="http://www.itmorelia.edu.mx/taller#Marca">
+    <rdfs:subClassOf rdf:resource="#Electronicos"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="http://www.itmorelia.edu.mx/taller#Estereo">
+    <rdfs:subClassOf rdf:resource="#Electronicos"/>
+</rdfs:Class>
+<rdfs:Class rdf:about="http://www.itmorelia.edu.mx/taller#Television">
+    <rdfs:subClassOf rdf:resource="#Electronicos"/>
+</rdfs:Class>
+ 
+
+<rdfs:Class rdf:ID="Plana">
+    <rdfs:subClassOf rdf:resource="#Television"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="Curva">
+    <rdfs:subClassOf rdf:resource="#Television"/>
+</rdfs:Class>
+
+<rdfs:Class rdf:ID="Plasma">
+    <rdfs:subClassOf rdf:resource="#Plana"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="LED">
+    <rdfs:subClassOf rdf:resource="#Plana"/>
+</rdfs:Class>
+<rdfs:Class rdf:ID="LCD">
+    <rdfs:subClassOf rdf:resource="#Plana"/>
+</rdfs:Class>
+ 
+<!-- ***************** propiedades ************************* -->
+<rdf:Property rdf:about="#nombre">
+     <rdfs:domain rdf:resource="#Electronicos"/>
+     <rdfs:range  rdf:resource="&xsd;string"/>
+</rdf:Property>
+
+<rdf:Property rdf:about="#nombreMarca">
+     <rdfs:domain rdf:resource="#Marca"/>
+     <rdfs:range  rdf:resource="&xsd;string"/>
+</rdf:Property>
+<rdf:Property rdf:about="#fundacion">
+     <rdfs:domain rdf:resource="#Marca"/>
+     <rdfs:range  rdf:resource="&xsd;date"/>
+</rdf:Property>
+<rdf:Property rdf:about="#nacionalidad">
+     <rdfs:domain rdf:resource="#Marca"/>
+     <rdfs:range  rdf:resource="&xsd;string"/>
+</rdf:Property>
+
+
+<rdf:Property rdf:about="#tipo">
+     <rdfs:domain rdf:resource="#Estereo"/>
+     <rdfs:range  rdf:resource="&xsd;string"/>
+</rdf:Property>
+
+ 
+<rdf:Property rdf:about="#marca">
+     <rdfs:domain rdf:resource="#Television"/>
+     <rdfs:range  rdf:resource="#Marca"/>
+</rdf:Property>
+<rdf:Property rdf:about="#existencia">
+     <rdfs:domain rdf:resource="#Television"/>
+     <rdfs:range  rdf:resource="&xsd;integer"/>
+</rdf:Property>
+<rdf:Property rdf:about="#precio">
+     <rdfs:domain rdf:resource="#Television"/>
+     <rdfs:range  rdf:resource="&xsd;double"/>
+</rdf:Property>
+<rdf:Property rdf:about="#modelo">
+     <rdfs:domain rdf:resource="#Television"/>
+     <rdfs:range  rdf:resource="&xsd;string"/>
+</rdf:Property>
+<rdf:Property rdf:about="#refresco">
+     <rdfs:domain rdf:resource="#Television"/>
+     <rdfs:range  rdf:resource="&xsd;string"/>
+</rdf:Property>
+<rdf:Property rdf:about="#color">
+     <rdfs:domain rdf:resource="#Television"/>
+     <rdfs:range  rdf:resource="&xsd;string"/>
+</rdf:Property>
+<rdf:Property rdf:about="#resolucion">
+     <rdfs:domain rdf:resource="#Television"/>
+     <rdfs:range  rdf:resource="&xsd;string"/>
+</rdf:Property>
+<rdf:Property rdf:about="#smart">
+     <rdfs:domain rdf:resource="#Television"/>
+     <rdfs:range  rdf:resource="&xsd;boolean"/>
+</rdf:Property>
+<rdf:Property rdf:about="#diagonal">
+     <rdfs:domain rdf:resource="#Television"/>
+     <rdfs:range  rdf:resource="&xsd;integer"/>
+</rdf:Property>
+ 
+
+<rdf:Property rdf:about="#angulo">
+     <rdfs:domain rdf:resource="#Plana"/>
+     <rdfs:range  rdf:resource="&xsd;integer"/>
+</rdf:Property>
+<rdf:Property rdf:about="#radio">
+     <rdfs:domain rdf:resource="#Curva"/>
+     <rdfs:range  rdf:resource="&xsd;double"/>
+</rdf:Property>
+ 
+
+<!-- ***************** instancias ************************* -->
+
+
+<rdf:Description rdf:about="#id1">
+   <rdf:type rdf:resource="#Television" /> 
+   <tecmor:nombre>Tele Bravia</tecmor:nombre>
+   <tecmor:diagonal>55</tecmor:diagonal>
+   <tecmor:existencia>23</tecmor:existencia> 
+   <tecmor:precio>13456.67</tecmor:precio>
+   <tecmor:modelo>Smart Series 1</tecmor:modelo>
+   <tecmor:refresco>120</tecmor:refresco>
+   <tecmor:smart>true</tecmor:smart>
+   <tecmor:resolucion>1080</tecmor:resolucion>
+   <tecmor:color>Negro</tecmor:color>
+    <tecmor:marca>Sony</tecmor:marca>
+</rdf:Description>
+
+<rdf:Description rdf:about="#id2">
+   <rdf:type rdf:resource="#Television" /> 
+   <tecmor:nombre>Tele divertina</tecmor:nombre>
+   <tecmor:diagonal>40</tecmor:diagonal>
+   <tecmor:marca>Panasonic</tecmor:marca>
+   <tecmor:existencia>12</tecmor:existencia> 
+   <tecmor:precio>6980</tecmor:precio>
+   <tecmor:modelo>Series 6</tecmor:modelo>
+   <tecmor:refresco>256</tecmor:refresco>
+   <tecmor:smart>true</tecmor:smart>
+   <tecmor:resolucion>720</tecmor:resolucion>
+   <tecmor:color>Negro</tecmor:color>
+</rdf:Description>
+
+
+</rdf:RDF>
+
