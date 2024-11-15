@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 .\\biblioteca.g 2024-11-15 10:42:03
+// $ANTLR 3.5.2 .\\biblioteca.g 2024-11-15 12:10:50
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -94,35 +94,35 @@ public class bibliotecaParser extends Parser {
 
 
 	// $ANTLR start "seccion"
-	// .\\biblioteca.g:6:1: seccion : ( 'Libros' ( WS )? registrosLibros | 'Usuarios' ( WS )? registrosUsuarios | 'Prestamos' ( WS )? registrosPrestamos );
+	// .\\biblioteca.g:6:1: seccion : ( 'Libros' ( WS )? ( registrosLibros )? | 'Usuarios' ( WS )? ( registrosUsuarios )? | 'Prestamos' ( WS )? ( registrosPrestamos )? );
 	public final void seccion() throws RecognitionException {
 		try {
-			// .\\biblioteca.g:7:5: ( 'Libros' ( WS )? registrosLibros | 'Usuarios' ( WS )? registrosUsuarios | 'Prestamos' ( WS )? registrosPrestamos )
-			int alt5=3;
+			// .\\biblioteca.g:7:5: ( 'Libros' ( WS )? ( registrosLibros )? | 'Usuarios' ( WS )? ( registrosUsuarios )? | 'Prestamos' ( WS )? ( registrosPrestamos )? )
+			int alt8=3;
 			switch ( input.LA(1) ) {
 			case 10:
 				{
-				alt5=1;
+				alt8=1;
 				}
 				break;
 			case 12:
 				{
-				alt5=2;
+				alt8=2;
 				}
 				break;
 			case 11:
 				{
-				alt5=3;
+				alt8=3;
 				}
 				break;
 			default:
 				NoViableAltException nvae =
-					new NoViableAltException("", 5, 0, input);
+					new NoViableAltException("", 8, 0, input);
 				throw nvae;
 			}
-			switch (alt5) {
+			switch (alt8) {
 				case 1 :
-					// .\\biblioteca.g:7:7: 'Libros' ( WS )? registrosLibros
+					// .\\biblioteca.g:7:7: 'Libros' ( WS )? ( registrosLibros )?
 					{
 					match(input,10,FOLLOW_10_in_seccion23); 
 					// .\\biblioteca.g:7:16: ( WS )?
@@ -141,43 +141,32 @@ public class bibliotecaParser extends Parser {
 
 					}
 
-					pushFollow(FOLLOW_registrosLibros_in_seccion28);
-					registrosLibros();
-					state._fsp--;
-
-					}
-					break;
-				case 2 :
-					// .\\biblioteca.g:8:7: 'Usuarios' ( WS )? registrosUsuarios
-					{
-					match(input,12,FOLLOW_12_in_seccion36); 
-					// .\\biblioteca.g:8:18: ( WS )?
+					// .\\biblioteca.g:7:20: ( registrosLibros )?
 					int alt3=2;
 					int LA3_0 = input.LA(1);
-					if ( (LA3_0==WS) ) {
+					if ( (LA3_0==INT) ) {
 						alt3=1;
 					}
 					switch (alt3) {
 						case 1 :
-							// .\\biblioteca.g:8:18: WS
+							// .\\biblioteca.g:7:20: registrosLibros
 							{
-							match(input,WS,FOLLOW_WS_in_seccion38); 
+							pushFollow(FOLLOW_registrosLibros_in_seccion28);
+							registrosLibros();
+							state._fsp--;
+
 							}
 							break;
 
 					}
 
-					pushFollow(FOLLOW_registrosUsuarios_in_seccion41);
-					registrosUsuarios();
-					state._fsp--;
-
 					}
 					break;
-				case 3 :
-					// .\\biblioteca.g:9:7: 'Prestamos' ( WS )? registrosPrestamos
+				case 2 :
+					// .\\biblioteca.g:8:7: 'Usuarios' ( WS )? ( registrosUsuarios )?
 					{
-					match(input,11,FOLLOW_11_in_seccion49); 
-					// .\\biblioteca.g:9:19: ( WS )?
+					match(input,12,FOLLOW_12_in_seccion37); 
+					// .\\biblioteca.g:8:18: ( WS )?
 					int alt4=2;
 					int LA4_0 = input.LA(1);
 					if ( (LA4_0==WS) ) {
@@ -185,17 +174,73 @@ public class bibliotecaParser extends Parser {
 					}
 					switch (alt4) {
 						case 1 :
-							// .\\biblioteca.g:9:19: WS
+							// .\\biblioteca.g:8:18: WS
 							{
-							match(input,WS,FOLLOW_WS_in_seccion51); 
+							match(input,WS,FOLLOW_WS_in_seccion39); 
 							}
 							break;
 
 					}
 
-					pushFollow(FOLLOW_registrosPrestamos_in_seccion54);
-					registrosPrestamos();
-					state._fsp--;
+					// .\\biblioteca.g:8:22: ( registrosUsuarios )?
+					int alt5=2;
+					int LA5_0 = input.LA(1);
+					if ( (LA5_0==INT) ) {
+						alt5=1;
+					}
+					switch (alt5) {
+						case 1 :
+							// .\\biblioteca.g:8:22: registrosUsuarios
+							{
+							pushFollow(FOLLOW_registrosUsuarios_in_seccion42);
+							registrosUsuarios();
+							state._fsp--;
+
+							}
+							break;
+
+					}
+
+					}
+					break;
+				case 3 :
+					// .\\biblioteca.g:9:7: 'Prestamos' ( WS )? ( registrosPrestamos )?
+					{
+					match(input,11,FOLLOW_11_in_seccion51); 
+					// .\\biblioteca.g:9:19: ( WS )?
+					int alt6=2;
+					int LA6_0 = input.LA(1);
+					if ( (LA6_0==WS) ) {
+						alt6=1;
+					}
+					switch (alt6) {
+						case 1 :
+							// .\\biblioteca.g:9:19: WS
+							{
+							match(input,WS,FOLLOW_WS_in_seccion53); 
+							}
+							break;
+
+					}
+
+					// .\\biblioteca.g:9:23: ( registrosPrestamos )?
+					int alt7=2;
+					int LA7_0 = input.LA(1);
+					if ( (LA7_0==INT) ) {
+						alt7=1;
+					}
+					switch (alt7) {
+						case 1 :
+							// .\\biblioteca.g:9:23: registrosPrestamos
+							{
+							pushFollow(FOLLOW_registrosPrestamos_in_seccion56);
+							registrosPrestamos();
+							state._fsp--;
+
+							}
+							break;
+
+					}
 
 					}
 					break;
@@ -222,20 +267,20 @@ public class bibliotecaParser extends Parser {
 			// .\\biblioteca.g:13:18: ( libro )+
 			{
 			// .\\biblioteca.g:13:18: ( libro )+
-			int cnt6=0;
-			loop6:
+			int cnt9=0;
+			loop9:
 			while (true) {
-				int alt6=2;
-				int LA6_0 = input.LA(1);
-				if ( (LA6_0==INT) ) {
-					alt6=1;
+				int alt9=2;
+				int LA9_0 = input.LA(1);
+				if ( (LA9_0==INT) ) {
+					alt9=1;
 				}
 
-				switch (alt6) {
+				switch (alt9) {
 				case 1 :
 					// .\\biblioteca.g:13:19: libro
 					{
-					pushFollow(FOLLOW_libro_in_registrosLibros68);
+					pushFollow(FOLLOW_libro_in_registrosLibros71);
 					libro();
 					state._fsp--;
 
@@ -243,11 +288,11 @@ public class bibliotecaParser extends Parser {
 					break;
 
 				default :
-					if ( cnt6 >= 1 ) break loop6;
-					EarlyExitException eee = new EarlyExitException(6, input);
+					if ( cnt9 >= 1 ) break loop9;
+					EarlyExitException eee = new EarlyExitException(9, input);
 					throw eee;
 				}
-				cnt6++;
+				cnt9++;
 			}
 
 			}
@@ -282,23 +327,23 @@ public class bibliotecaParser extends Parser {
 			// .\\biblioteca.g:16:5: (id= INT COMMA nombre= STRING COMMA editorial= STRING COMMA autor= STRING COMMA genero= STRING COMMA paisAutor= STRING COMMA numeroPaginas= INT COMMA anioEdicion= DATE COMMA precio= DOUBLE )
 			// .\\biblioteca.g:16:7: id= INT COMMA nombre= STRING COMMA editorial= STRING COMMA autor= STRING COMMA genero= STRING COMMA paisAutor= STRING COMMA numeroPaginas= INT COMMA anioEdicion= DATE COMMA precio= DOUBLE
 			{
-			id=(Token)match(input,INT,FOLLOW_INT_in_libro84); 
-			match(input,COMMA,FOLLOW_COMMA_in_libro86); 
-			nombre=(Token)match(input,STRING,FOLLOW_STRING_in_libro96); 
-			match(input,COMMA,FOLLOW_COMMA_in_libro98); 
-			editorial=(Token)match(input,STRING,FOLLOW_STRING_in_libro108); 
-			match(input,COMMA,FOLLOW_COMMA_in_libro110); 
-			autor=(Token)match(input,STRING,FOLLOW_STRING_in_libro120); 
-			match(input,COMMA,FOLLOW_COMMA_in_libro122); 
-			genero=(Token)match(input,STRING,FOLLOW_STRING_in_libro132); 
-			match(input,COMMA,FOLLOW_COMMA_in_libro134); 
-			paisAutor=(Token)match(input,STRING,FOLLOW_STRING_in_libro144); 
-			match(input,COMMA,FOLLOW_COMMA_in_libro146); 
-			numeroPaginas=(Token)match(input,INT,FOLLOW_INT_in_libro156); 
-			match(input,COMMA,FOLLOW_COMMA_in_libro158); 
-			anioEdicion=(Token)match(input,DATE,FOLLOW_DATE_in_libro168); 
-			match(input,COMMA,FOLLOW_COMMA_in_libro170); 
-			precio=(Token)match(input,DOUBLE,FOLLOW_DOUBLE_in_libro180); 
+			id=(Token)match(input,INT,FOLLOW_INT_in_libro87); 
+			match(input,COMMA,FOLLOW_COMMA_in_libro89); 
+			nombre=(Token)match(input,STRING,FOLLOW_STRING_in_libro99); 
+			match(input,COMMA,FOLLOW_COMMA_in_libro101); 
+			editorial=(Token)match(input,STRING,FOLLOW_STRING_in_libro111); 
+			match(input,COMMA,FOLLOW_COMMA_in_libro113); 
+			autor=(Token)match(input,STRING,FOLLOW_STRING_in_libro123); 
+			match(input,COMMA,FOLLOW_COMMA_in_libro125); 
+			genero=(Token)match(input,STRING,FOLLOW_STRING_in_libro135); 
+			match(input,COMMA,FOLLOW_COMMA_in_libro137); 
+			paisAutor=(Token)match(input,STRING,FOLLOW_STRING_in_libro147); 
+			match(input,COMMA,FOLLOW_COMMA_in_libro149); 
+			numeroPaginas=(Token)match(input,INT,FOLLOW_INT_in_libro159); 
+			match(input,COMMA,FOLLOW_COMMA_in_libro161); 
+			anioEdicion=(Token)match(input,DATE,FOLLOW_DATE_in_libro171); 
+			match(input,COMMA,FOLLOW_COMMA_in_libro173); 
+			precio=(Token)match(input,DOUBLE,FOLLOW_DOUBLE_in_libro183); 
 
 			        // Generar RDF para el libro
 			        System.out.println("<!-- Instancia libro -->");
@@ -338,20 +383,20 @@ public class bibliotecaParser extends Parser {
 			// .\\biblioteca.g:43:20: ( usuario )+
 			{
 			// .\\biblioteca.g:43:20: ( usuario )+
-			int cnt7=0;
-			loop7:
+			int cnt10=0;
+			loop10:
 			while (true) {
-				int alt7=2;
-				int LA7_0 = input.LA(1);
-				if ( (LA7_0==INT) ) {
-					alt7=1;
+				int alt10=2;
+				int LA10_0 = input.LA(1);
+				if ( (LA10_0==INT) ) {
+					alt10=1;
 				}
 
-				switch (alt7) {
+				switch (alt10) {
 				case 1 :
 					// .\\biblioteca.g:43:21: usuario
 					{
-					pushFollow(FOLLOW_usuario_in_registrosUsuarios195);
+					pushFollow(FOLLOW_usuario_in_registrosUsuarios198);
 					usuario();
 					state._fsp--;
 
@@ -359,11 +404,11 @@ public class bibliotecaParser extends Parser {
 					break;
 
 				default :
-					if ( cnt7 >= 1 ) break loop7;
-					EarlyExitException eee = new EarlyExitException(7, input);
+					if ( cnt10 >= 1 ) break loop10;
+					EarlyExitException eee = new EarlyExitException(10, input);
 					throw eee;
 				}
-				cnt7++;
+				cnt10++;
 			}
 
 			}
@@ -397,21 +442,21 @@ public class bibliotecaParser extends Parser {
 			// .\\biblioteca.g:45:8: (id= INT COMMA nombre= STRING COMMA apellido= STRING COMMA ine= INT COMMA domicilio= STRING COMMA estado= STRING COMMA municipio= STRING COMMA nacimiento= DATE )
 			// .\\biblioteca.g:46:7: id= INT COMMA nombre= STRING COMMA apellido= STRING COMMA ine= INT COMMA domicilio= STRING COMMA estado= STRING COMMA municipio= STRING COMMA nacimiento= DATE
 			{
-			id=(Token)match(input,INT,FOLLOW_INT_in_usuario213); 
-			match(input,COMMA,FOLLOW_COMMA_in_usuario215); 
-			nombre=(Token)match(input,STRING,FOLLOW_STRING_in_usuario225); 
-			match(input,COMMA,FOLLOW_COMMA_in_usuario227); 
-			apellido=(Token)match(input,STRING,FOLLOW_STRING_in_usuario237); 
-			match(input,COMMA,FOLLOW_COMMA_in_usuario239); 
-			ine=(Token)match(input,INT,FOLLOW_INT_in_usuario249); 
-			match(input,COMMA,FOLLOW_COMMA_in_usuario251); 
-			domicilio=(Token)match(input,STRING,FOLLOW_STRING_in_usuario261); 
-			match(input,COMMA,FOLLOW_COMMA_in_usuario263); 
-			estado=(Token)match(input,STRING,FOLLOW_STRING_in_usuario273); 
-			match(input,COMMA,FOLLOW_COMMA_in_usuario275); 
-			municipio=(Token)match(input,STRING,FOLLOW_STRING_in_usuario285); 
-			match(input,COMMA,FOLLOW_COMMA_in_usuario287); 
-			nacimiento=(Token)match(input,DATE,FOLLOW_DATE_in_usuario297); 
+			id=(Token)match(input,INT,FOLLOW_INT_in_usuario216); 
+			match(input,COMMA,FOLLOW_COMMA_in_usuario218); 
+			nombre=(Token)match(input,STRING,FOLLOW_STRING_in_usuario228); 
+			match(input,COMMA,FOLLOW_COMMA_in_usuario230); 
+			apellido=(Token)match(input,STRING,FOLLOW_STRING_in_usuario240); 
+			match(input,COMMA,FOLLOW_COMMA_in_usuario242); 
+			ine=(Token)match(input,INT,FOLLOW_INT_in_usuario252); 
+			match(input,COMMA,FOLLOW_COMMA_in_usuario254); 
+			domicilio=(Token)match(input,STRING,FOLLOW_STRING_in_usuario264); 
+			match(input,COMMA,FOLLOW_COMMA_in_usuario266); 
+			estado=(Token)match(input,STRING,FOLLOW_STRING_in_usuario276); 
+			match(input,COMMA,FOLLOW_COMMA_in_usuario278); 
+			municipio=(Token)match(input,STRING,FOLLOW_STRING_in_usuario288); 
+			match(input,COMMA,FOLLOW_COMMA_in_usuario290); 
+			nacimiento=(Token)match(input,DATE,FOLLOW_DATE_in_usuario300); 
 
 			        // Generar RDF para el usuario
 			        System.out.println("<!-- Instancia usuario -->");
@@ -450,20 +495,20 @@ public class bibliotecaParser extends Parser {
 			// .\\biblioteca.g:71:21: ( prestamo )+
 			{
 			// .\\biblioteca.g:71:21: ( prestamo )+
-			int cnt8=0;
-			loop8:
+			int cnt11=0;
+			loop11:
 			while (true) {
-				int alt8=2;
-				int LA8_0 = input.LA(1);
-				if ( (LA8_0==INT) ) {
-					alt8=1;
+				int alt11=2;
+				int LA11_0 = input.LA(1);
+				if ( (LA11_0==INT) ) {
+					alt11=1;
 				}
 
-				switch (alt8) {
+				switch (alt11) {
 				case 1 :
 					// .\\biblioteca.g:71:22: prestamo
 					{
-					pushFollow(FOLLOW_prestamo_in_registrosPrestamos312);
+					pushFollow(FOLLOW_prestamo_in_registrosPrestamos315);
 					prestamo();
 					state._fsp--;
 
@@ -471,11 +516,11 @@ public class bibliotecaParser extends Parser {
 					break;
 
 				default :
-					if ( cnt8 >= 1 ) break loop8;
-					EarlyExitException eee = new EarlyExitException(8, input);
+					if ( cnt11 >= 1 ) break loop11;
+					EarlyExitException eee = new EarlyExitException(11, input);
 					throw eee;
 				}
-				cnt8++;
+				cnt11++;
 			}
 
 			}
@@ -507,17 +552,17 @@ public class bibliotecaParser extends Parser {
 			// .\\biblioteca.g:73:9: (numeroPedido= INT COMMA codigoLibro= INT COMMA codigoUsuario= INT COMMA fechaSalida= DATE COMMA fechaMaxima= DATE COMMA fechaDevolucion= DATE )
 			// .\\biblioteca.g:74:7: numeroPedido= INT COMMA codigoLibro= INT COMMA codigoUsuario= INT COMMA fechaSalida= DATE COMMA fechaMaxima= DATE COMMA fechaDevolucion= DATE
 			{
-			numeroPedido=(Token)match(input,INT,FOLLOW_INT_in_prestamo329); 
-			match(input,COMMA,FOLLOW_COMMA_in_prestamo331); 
-			codigoLibro=(Token)match(input,INT,FOLLOW_INT_in_prestamo341); 
-			match(input,COMMA,FOLLOW_COMMA_in_prestamo343); 
-			codigoUsuario=(Token)match(input,INT,FOLLOW_INT_in_prestamo353); 
-			match(input,COMMA,FOLLOW_COMMA_in_prestamo355); 
-			fechaSalida=(Token)match(input,DATE,FOLLOW_DATE_in_prestamo365); 
-			match(input,COMMA,FOLLOW_COMMA_in_prestamo367); 
-			fechaMaxima=(Token)match(input,DATE,FOLLOW_DATE_in_prestamo377); 
-			match(input,COMMA,FOLLOW_COMMA_in_prestamo379); 
-			fechaDevolucion=(Token)match(input,DATE,FOLLOW_DATE_in_prestamo389); 
+			numeroPedido=(Token)match(input,INT,FOLLOW_INT_in_prestamo332); 
+			match(input,COMMA,FOLLOW_COMMA_in_prestamo334); 
+			codigoLibro=(Token)match(input,INT,FOLLOW_INT_in_prestamo344); 
+			match(input,COMMA,FOLLOW_COMMA_in_prestamo346); 
+			codigoUsuario=(Token)match(input,INT,FOLLOW_INT_in_prestamo356); 
+			match(input,COMMA,FOLLOW_COMMA_in_prestamo358); 
+			fechaSalida=(Token)match(input,DATE,FOLLOW_DATE_in_prestamo368); 
+			match(input,COMMA,FOLLOW_COMMA_in_prestamo370); 
+			fechaMaxima=(Token)match(input,DATE,FOLLOW_DATE_in_prestamo380); 
+			match(input,COMMA,FOLLOW_COMMA_in_prestamo382); 
+			fechaDevolucion=(Token)match(input,DATE,FOLLOW_DATE_in_prestamo392); 
 
 			        // Generar RDF para el préstamo
 			        System.out.println("<!-- Instancia prestamo -->");
@@ -548,59 +593,59 @@ public class bibliotecaParser extends Parser {
 
 
 	public static final BitSet FOLLOW_seccion_in_inicio9 = new BitSet(new long[]{0x0000000000001C02L});
-	public static final BitSet FOLLOW_10_in_seccion23 = new BitSet(new long[]{0x0000000000000280L});
-	public static final BitSet FOLLOW_WS_in_seccion25 = new BitSet(new long[]{0x0000000000000080L});
+	public static final BitSet FOLLOW_10_in_seccion23 = new BitSet(new long[]{0x0000000000000282L});
+	public static final BitSet FOLLOW_WS_in_seccion25 = new BitSet(new long[]{0x0000000000000082L});
 	public static final BitSet FOLLOW_registrosLibros_in_seccion28 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_12_in_seccion36 = new BitSet(new long[]{0x0000000000000280L});
-	public static final BitSet FOLLOW_WS_in_seccion38 = new BitSet(new long[]{0x0000000000000080L});
-	public static final BitSet FOLLOW_registrosUsuarios_in_seccion41 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_11_in_seccion49 = new BitSet(new long[]{0x0000000000000280L});
-	public static final BitSet FOLLOW_WS_in_seccion51 = new BitSet(new long[]{0x0000000000000080L});
-	public static final BitSet FOLLOW_registrosPrestamos_in_seccion54 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_libro_in_registrosLibros68 = new BitSet(new long[]{0x0000000000000082L});
-	public static final BitSet FOLLOW_INT_in_libro84 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_COMMA_in_libro86 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_STRING_in_libro96 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_COMMA_in_libro98 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_STRING_in_libro108 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_COMMA_in_libro110 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_STRING_in_libro120 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_COMMA_in_libro122 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_STRING_in_libro132 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_COMMA_in_libro134 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_STRING_in_libro144 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_COMMA_in_libro146 = new BitSet(new long[]{0x0000000000000080L});
-	public static final BitSet FOLLOW_INT_in_libro156 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_COMMA_in_libro158 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_DATE_in_libro168 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_COMMA_in_libro170 = new BitSet(new long[]{0x0000000000000040L});
-	public static final BitSet FOLLOW_DOUBLE_in_libro180 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_usuario_in_registrosUsuarios195 = new BitSet(new long[]{0x0000000000000082L});
-	public static final BitSet FOLLOW_INT_in_usuario213 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_COMMA_in_usuario215 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_STRING_in_usuario225 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_COMMA_in_usuario227 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_STRING_in_usuario237 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_COMMA_in_usuario239 = new BitSet(new long[]{0x0000000000000080L});
-	public static final BitSet FOLLOW_INT_in_usuario249 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_COMMA_in_usuario251 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_STRING_in_usuario261 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_COMMA_in_usuario263 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_STRING_in_usuario273 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_COMMA_in_usuario275 = new BitSet(new long[]{0x0000000000000100L});
-	public static final BitSet FOLLOW_STRING_in_usuario285 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_COMMA_in_usuario287 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_DATE_in_usuario297 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_prestamo_in_registrosPrestamos312 = new BitSet(new long[]{0x0000000000000082L});
-	public static final BitSet FOLLOW_INT_in_prestamo329 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_COMMA_in_prestamo331 = new BitSet(new long[]{0x0000000000000080L});
-	public static final BitSet FOLLOW_INT_in_prestamo341 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_COMMA_in_prestamo343 = new BitSet(new long[]{0x0000000000000080L});
-	public static final BitSet FOLLOW_INT_in_prestamo353 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_COMMA_in_prestamo355 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_DATE_in_prestamo365 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_COMMA_in_prestamo367 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_DATE_in_prestamo377 = new BitSet(new long[]{0x0000000000000010L});
-	public static final BitSet FOLLOW_COMMA_in_prestamo379 = new BitSet(new long[]{0x0000000000000020L});
-	public static final BitSet FOLLOW_DATE_in_prestamo389 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_12_in_seccion37 = new BitSet(new long[]{0x0000000000000282L});
+	public static final BitSet FOLLOW_WS_in_seccion39 = new BitSet(new long[]{0x0000000000000082L});
+	public static final BitSet FOLLOW_registrosUsuarios_in_seccion42 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_11_in_seccion51 = new BitSet(new long[]{0x0000000000000282L});
+	public static final BitSet FOLLOW_WS_in_seccion53 = new BitSet(new long[]{0x0000000000000082L});
+	public static final BitSet FOLLOW_registrosPrestamos_in_seccion56 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_libro_in_registrosLibros71 = new BitSet(new long[]{0x0000000000000082L});
+	public static final BitSet FOLLOW_INT_in_libro87 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_COMMA_in_libro89 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_STRING_in_libro99 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_COMMA_in_libro101 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_STRING_in_libro111 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_COMMA_in_libro113 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_STRING_in_libro123 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_COMMA_in_libro125 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_STRING_in_libro135 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_COMMA_in_libro137 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_STRING_in_libro147 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_COMMA_in_libro149 = new BitSet(new long[]{0x0000000000000080L});
+	public static final BitSet FOLLOW_INT_in_libro159 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_COMMA_in_libro161 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_DATE_in_libro171 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_COMMA_in_libro173 = new BitSet(new long[]{0x0000000000000040L});
+	public static final BitSet FOLLOW_DOUBLE_in_libro183 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_usuario_in_registrosUsuarios198 = new BitSet(new long[]{0x0000000000000082L});
+	public static final BitSet FOLLOW_INT_in_usuario216 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_COMMA_in_usuario218 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_STRING_in_usuario228 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_COMMA_in_usuario230 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_STRING_in_usuario240 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_COMMA_in_usuario242 = new BitSet(new long[]{0x0000000000000080L});
+	public static final BitSet FOLLOW_INT_in_usuario252 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_COMMA_in_usuario254 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_STRING_in_usuario264 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_COMMA_in_usuario266 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_STRING_in_usuario276 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_COMMA_in_usuario278 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_STRING_in_usuario288 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_COMMA_in_usuario290 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_DATE_in_usuario300 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_prestamo_in_registrosPrestamos315 = new BitSet(new long[]{0x0000000000000082L});
+	public static final BitSet FOLLOW_INT_in_prestamo332 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_COMMA_in_prestamo334 = new BitSet(new long[]{0x0000000000000080L});
+	public static final BitSet FOLLOW_INT_in_prestamo344 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_COMMA_in_prestamo346 = new BitSet(new long[]{0x0000000000000080L});
+	public static final BitSet FOLLOW_INT_in_prestamo356 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_COMMA_in_prestamo358 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_DATE_in_prestamo368 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_COMMA_in_prestamo370 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_DATE_in_prestamo380 = new BitSet(new long[]{0x0000000000000010L});
+	public static final BitSet FOLLOW_COMMA_in_prestamo382 = new BitSet(new long[]{0x0000000000000020L});
+	public static final BitSet FOLLOW_DATE_in_prestamo392 = new BitSet(new long[]{0x0000000000000002L});
 }
