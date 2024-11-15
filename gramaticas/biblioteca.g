@@ -27,7 +27,6 @@ libro
         System.out.println("<!-- Instancia libro -->");
         System.out.println("<rdf:Description rdf:about=\"#codigoLibro "+$id.text+"\">");
         System.out.println("  <rdf:type rdf:resource=\"#Libro\" />");
-        System.out.println("  <biblioteca:codigoLibro>"+$id.text+"</biblioteca:codigoLibro>");
         System.out.println("  <biblioteca:nombreLibro>"+$nombre.text+"</biblioteca:nombreLibro>");
         System.out.println("  <biblioteca:editorial>"+$editorial.text+"</biblioteca:editorial>");
         System.out.println("  <biblioteca:autor>"+$autor.text+"</biblioteca:autor>");
@@ -56,7 +55,6 @@ usuario:
         System.out.println("<!-- Instancia usuario -->");
         System.out.println("<rdf:Description rdf:about=\"#"+$id.text+"\">");
         System.out.println("  <rdf:type rdf:resource=\"#Usuario\" />");
-        System.out.println("  <biblioteca:codigoUsuario>"+$id.text+"</biblioteca:codigoUsuario>");
         System.out.println("  <biblioteca:nombre>"+$nombre.text+"</biblioteca:nombre>");
         System.out.println("  <biblioteca:apellidos>"+$apellido.text+"</biblioteca:apellidos>");
         System.out.println("  <biblioteca:noIdentificacion>"+$ine.text+"</biblioteca:noIdentificacion>");

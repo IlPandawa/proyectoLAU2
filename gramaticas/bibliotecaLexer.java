@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 biblioteca.g 2024-11-15 12:19:50
+// $ANTLR 3.5.2 .\\biblioteca.g 2024-11-15 12:45:49
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -31,15 +31,15 @@ public class bibliotecaLexer extends Lexer {
 	public bibliotecaLexer(CharStream input, RecognizerSharedState state) {
 		super(input,state);
 	}
-	@Override public String getGrammarFileName() { return "biblioteca.g"; }
+	@Override public String getGrammarFileName() { return ".\\biblioteca.g"; }
 
 	// $ANTLR start "T__10"
 	public final void mT__10() throws RecognitionException {
 		try {
 			int _type = T__10;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// biblioteca.g:2:7: ( 'Libros' )
-			// biblioteca.g:2:9: 'Libros'
+			// .\\biblioteca.g:2:7: ( 'Libros' )
+			// .\\biblioteca.g:2:9: 'Libros'
 			{
 			match("Libros"); 
 
@@ -59,8 +59,8 @@ public class bibliotecaLexer extends Lexer {
 		try {
 			int _type = T__11;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// biblioteca.g:3:7: ( 'Prestamos' )
-			// biblioteca.g:3:9: 'Prestamos'
+			// .\\biblioteca.g:3:7: ( 'Prestamos' )
+			// .\\biblioteca.g:3:9: 'Prestamos'
 			{
 			match("Prestamos"); 
 
@@ -80,8 +80,8 @@ public class bibliotecaLexer extends Lexer {
 		try {
 			int _type = T__12;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// biblioteca.g:4:7: ( 'Usuarios' )
-			// biblioteca.g:4:9: 'Usuarios'
+			// .\\biblioteca.g:4:7: ( 'Usuarios' )
+			// .\\biblioteca.g:4:9: 'Usuarios'
 			{
 			match("Usuarios"); 
 
@@ -101,10 +101,10 @@ public class bibliotecaLexer extends Lexer {
 		try {
 			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// biblioteca.g:93:4: ( ( '0' .. '9' )+ )
-			// biblioteca.g:93:6: ( '0' .. '9' )+
+			// .\\biblioteca.g:91:4: ( ( '0' .. '9' )+ )
+			// .\\biblioteca.g:91:6: ( '0' .. '9' )+
 			{
-			// biblioteca.g:93:6: ( '0' .. '9' )+
+			// .\\biblioteca.g:91:6: ( '0' .. '9' )+
 			int cnt1=0;
 			loop1:
 			while (true) {
@@ -116,7 +116,7 @@ public class bibliotecaLexer extends Lexer {
 
 				switch (alt1) {
 				case 1 :
-					// biblioteca.g:
+					// .\\biblioteca.g:
 					{
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '9') ) {
 						input.consume();
@@ -153,8 +153,8 @@ public class bibliotecaLexer extends Lexer {
 		try {
 			int _type = DOUBLE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// biblioteca.g:94:7: ( INT '.' INT )
-			// biblioteca.g:94:9: INT '.' INT
+			// .\\biblioteca.g:92:7: ( INT '.' INT )
+			// .\\biblioteca.g:92:9: INT '.' INT
 			{
 			mINT(); 
 
@@ -177,8 +177,8 @@ public class bibliotecaLexer extends Lexer {
 		try {
 			int _type = STRING;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// biblioteca.g:95:7: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | ' ' )* )
-			// biblioteca.g:95:9: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | ' ' )*
+			// .\\biblioteca.g:93:7: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | ' ' )* )
+			// .\\biblioteca.g:93:9: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | ' ' )*
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
@@ -188,7 +188,7 @@ public class bibliotecaLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// biblioteca.g:95:41: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | ' ' )*
+			// .\\biblioteca.g:93:41: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | ' ' )*
 			loop2:
 			while (true) {
 				int alt2=2;
@@ -199,7 +199,7 @@ public class bibliotecaLexer extends Lexer {
 
 				switch (alt2) {
 				case 1 :
-					// biblioteca.g:
+					// .\\biblioteca.g:
 					{
 					if ( input.LA(1)==' '||(input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 						input.consume();
@@ -233,8 +233,8 @@ public class bibliotecaLexer extends Lexer {
 		try {
 			int _type = DATE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// biblioteca.g:96:5: ( INT '/' INT '/' INT )
-			// biblioteca.g:96:7: INT '/' INT '/' INT
+			// .\\biblioteca.g:94:5: ( INT '/' INT '/' INT )
+			// .\\biblioteca.g:94:7: INT '/' INT '/' INT
 			{
 			mINT(); 
 
@@ -260,8 +260,8 @@ public class bibliotecaLexer extends Lexer {
 		try {
 			int _type = COMMA;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// biblioteca.g:97:6: ( ',' )
-			// biblioteca.g:97:8: ','
+			// .\\biblioteca.g:95:6: ( ',' )
+			// .\\biblioteca.g:95:8: ','
 			{
 			match(','); 
 			}
@@ -280,10 +280,10 @@ public class bibliotecaLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// biblioteca.g:98:3: ( ( ' ' | '\\n' | '\\t' | '\\r' )+ )
-			// biblioteca.g:98:5: ( ' ' | '\\n' | '\\t' | '\\r' )+
+			// .\\biblioteca.g:96:3: ( ( ' ' | '\\n' | '\\t' | '\\r' )+ )
+			// .\\biblioteca.g:96:5: ( ' ' | '\\n' | '\\t' | '\\r' )+
 			{
-			// biblioteca.g:98:5: ( ' ' | '\\n' | '\\t' | '\\r' )+
+			// .\\biblioteca.g:96:5: ( ' ' | '\\n' | '\\t' | '\\r' )+
 			int cnt3=0;
 			loop3:
 			while (true) {
@@ -295,7 +295,7 @@ public class bibliotecaLexer extends Lexer {
 
 				switch (alt3) {
 				case 1 :
-					// biblioteca.g:
+					// .\\biblioteca.g:
 					{
 					if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
 						input.consume();
@@ -330,68 +330,68 @@ public class bibliotecaLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// biblioteca.g:1:8: ( T__10 | T__11 | T__12 | INT | DOUBLE | STRING | DATE | COMMA | WS )
+		// .\\biblioteca.g:1:8: ( T__10 | T__11 | T__12 | INT | DOUBLE | STRING | DATE | COMMA | WS )
 		int alt4=9;
 		alt4 = dfa4.predict(input);
 		switch (alt4) {
 			case 1 :
-				// biblioteca.g:1:10: T__10
+				// .\\biblioteca.g:1:10: T__10
 				{
 				mT__10(); 
 
 				}
 				break;
 			case 2 :
-				// biblioteca.g:1:16: T__11
+				// .\\biblioteca.g:1:16: T__11
 				{
 				mT__11(); 
 
 				}
 				break;
 			case 3 :
-				// biblioteca.g:1:22: T__12
+				// .\\biblioteca.g:1:22: T__12
 				{
 				mT__12(); 
 
 				}
 				break;
 			case 4 :
-				// biblioteca.g:1:28: INT
+				// .\\biblioteca.g:1:28: INT
 				{
 				mINT(); 
 
 				}
 				break;
 			case 5 :
-				// biblioteca.g:1:32: DOUBLE
+				// .\\biblioteca.g:1:32: DOUBLE
 				{
 				mDOUBLE(); 
 
 				}
 				break;
 			case 6 :
-				// biblioteca.g:1:39: STRING
+				// .\\biblioteca.g:1:39: STRING
 				{
 				mSTRING(); 
 
 				}
 				break;
 			case 7 :
-				// biblioteca.g:1:46: DATE
+				// .\\biblioteca.g:1:46: DATE
 				{
 				mDATE(); 
 
 				}
 				break;
 			case 8 :
-				// biblioteca.g:1:51: COMMA
+				// .\\biblioteca.g:1:51: COMMA
 				{
 				mCOMMA(); 
 
 				}
 				break;
 			case 9 :
-				// biblioteca.g:1:57: WS
+				// .\\biblioteca.g:1:57: WS
 				{
 				mWS(); 
 

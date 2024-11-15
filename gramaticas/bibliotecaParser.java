@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 biblioteca.g 2024-11-15 12:19:50
+// $ANTLR 3.5.2 .\\biblioteca.g 2024-11-15 12:45:49
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -38,18 +38,18 @@ public class bibliotecaParser extends Parser {
 	}
 
 	@Override public String[] getTokenNames() { return bibliotecaParser.tokenNames; }
-	@Override public String getGrammarFileName() { return "biblioteca.g"; }
+	@Override public String getGrammarFileName() { return ".\\biblioteca.g"; }
 
 
 
 	// $ANTLR start "inicio"
-	// biblioteca.g:3:1: inicio : ( seccion )+ ;
+	// .\\biblioteca.g:3:1: inicio : ( seccion )+ ;
 	public final void inicio() throws RecognitionException {
 		try {
-			// biblioteca.g:3:7: ( ( seccion )+ )
-			// biblioteca.g:3:9: ( seccion )+
+			// .\\biblioteca.g:3:7: ( ( seccion )+ )
+			// .\\biblioteca.g:3:9: ( seccion )+
 			{
-			// biblioteca.g:3:9: ( seccion )+
+			// .\\biblioteca.g:3:9: ( seccion )+
 			int cnt1=0;
 			loop1:
 			while (true) {
@@ -61,7 +61,7 @@ public class bibliotecaParser extends Parser {
 
 				switch (alt1) {
 				case 1 :
-					// biblioteca.g:3:9: seccion
+					// .\\biblioteca.g:3:9: seccion
 					{
 					pushFollow(FOLLOW_seccion_in_inicio9);
 					seccion();
@@ -94,10 +94,10 @@ public class bibliotecaParser extends Parser {
 
 
 	// $ANTLR start "seccion"
-	// biblioteca.g:6:1: seccion : ( 'Libros' ( registrosLibros )? ( WS )? | 'Usuarios' ( registrosUsuarios )? ( WS )? | 'Prestamos' ( registrosPrestamos )? ( WS )? );
+	// .\\biblioteca.g:6:1: seccion : ( 'Libros' ( registrosLibros )? ( WS )? | 'Usuarios' ( registrosUsuarios )? ( WS )? | 'Prestamos' ( registrosPrestamos )? ( WS )? );
 	public final void seccion() throws RecognitionException {
 		try {
-			// biblioteca.g:7:5: ( 'Libros' ( registrosLibros )? ( WS )? | 'Usuarios' ( registrosUsuarios )? ( WS )? | 'Prestamos' ( registrosPrestamos )? ( WS )? )
+			// .\\biblioteca.g:7:5: ( 'Libros' ( registrosLibros )? ( WS )? | 'Usuarios' ( registrosUsuarios )? ( WS )? | 'Prestamos' ( registrosPrestamos )? ( WS )? )
 			int alt8=3;
 			switch ( input.LA(1) ) {
 			case 10:
@@ -122,10 +122,10 @@ public class bibliotecaParser extends Parser {
 			}
 			switch (alt8) {
 				case 1 :
-					// biblioteca.g:7:7: 'Libros' ( registrosLibros )? ( WS )?
+					// .\\biblioteca.g:7:7: 'Libros' ( registrosLibros )? ( WS )?
 					{
 					match(input,10,FOLLOW_10_in_seccion23); 
-					// biblioteca.g:7:16: ( registrosLibros )?
+					// .\\biblioteca.g:7:16: ( registrosLibros )?
 					int alt2=2;
 					int LA2_0 = input.LA(1);
 					if ( (LA2_0==INT) ) {
@@ -133,7 +133,7 @@ public class bibliotecaParser extends Parser {
 					}
 					switch (alt2) {
 						case 1 :
-							// biblioteca.g:7:16: registrosLibros
+							// .\\biblioteca.g:7:16: registrosLibros
 							{
 							pushFollow(FOLLOW_registrosLibros_in_seccion25);
 							registrosLibros();
@@ -144,7 +144,7 @@ public class bibliotecaParser extends Parser {
 
 					}
 
-					// biblioteca.g:7:34: ( WS )?
+					// .\\biblioteca.g:7:34: ( WS )?
 					int alt3=2;
 					int LA3_0 = input.LA(1);
 					if ( (LA3_0==WS) ) {
@@ -152,7 +152,7 @@ public class bibliotecaParser extends Parser {
 					}
 					switch (alt3) {
 						case 1 :
-							// biblioteca.g:7:34: WS
+							// .\\biblioteca.g:7:34: WS
 							{
 							match(input,WS,FOLLOW_WS_in_seccion29); 
 							}
@@ -163,10 +163,10 @@ public class bibliotecaParser extends Parser {
 					}
 					break;
 				case 2 :
-					// biblioteca.g:8:7: 'Usuarios' ( registrosUsuarios )? ( WS )?
+					// .\\biblioteca.g:8:7: 'Usuarios' ( registrosUsuarios )? ( WS )?
 					{
 					match(input,12,FOLLOW_12_in_seccion38); 
-					// biblioteca.g:8:18: ( registrosUsuarios )?
+					// .\\biblioteca.g:8:18: ( registrosUsuarios )?
 					int alt4=2;
 					int LA4_0 = input.LA(1);
 					if ( (LA4_0==INT) ) {
@@ -174,7 +174,7 @@ public class bibliotecaParser extends Parser {
 					}
 					switch (alt4) {
 						case 1 :
-							// biblioteca.g:8:18: registrosUsuarios
+							// .\\biblioteca.g:8:18: registrosUsuarios
 							{
 							pushFollow(FOLLOW_registrosUsuarios_in_seccion40);
 							registrosUsuarios();
@@ -185,7 +185,7 @@ public class bibliotecaParser extends Parser {
 
 					}
 
-					// biblioteca.g:8:38: ( WS )?
+					// .\\biblioteca.g:8:38: ( WS )?
 					int alt5=2;
 					int LA5_0 = input.LA(1);
 					if ( (LA5_0==WS) ) {
@@ -193,7 +193,7 @@ public class bibliotecaParser extends Parser {
 					}
 					switch (alt5) {
 						case 1 :
-							// biblioteca.g:8:38: WS
+							// .\\biblioteca.g:8:38: WS
 							{
 							match(input,WS,FOLLOW_WS_in_seccion44); 
 							}
@@ -204,10 +204,10 @@ public class bibliotecaParser extends Parser {
 					}
 					break;
 				case 3 :
-					// biblioteca.g:9:7: 'Prestamos' ( registrosPrestamos )? ( WS )?
+					// .\\biblioteca.g:9:7: 'Prestamos' ( registrosPrestamos )? ( WS )?
 					{
 					match(input,11,FOLLOW_11_in_seccion53); 
-					// biblioteca.g:9:20: ( registrosPrestamos )?
+					// .\\biblioteca.g:9:20: ( registrosPrestamos )?
 					int alt6=2;
 					int LA6_0 = input.LA(1);
 					if ( (LA6_0==INT) ) {
@@ -215,7 +215,7 @@ public class bibliotecaParser extends Parser {
 					}
 					switch (alt6) {
 						case 1 :
-							// biblioteca.g:9:20: registrosPrestamos
+							// .\\biblioteca.g:9:20: registrosPrestamos
 							{
 							pushFollow(FOLLOW_registrosPrestamos_in_seccion56);
 							registrosPrestamos();
@@ -226,7 +226,7 @@ public class bibliotecaParser extends Parser {
 
 					}
 
-					// biblioteca.g:9:41: ( WS )?
+					// .\\biblioteca.g:9:41: ( WS )?
 					int alt7=2;
 					int LA7_0 = input.LA(1);
 					if ( (LA7_0==WS) ) {
@@ -234,7 +234,7 @@ public class bibliotecaParser extends Parser {
 					}
 					switch (alt7) {
 						case 1 :
-							// biblioteca.g:9:41: WS
+							// .\\biblioteca.g:9:41: WS
 							{
 							match(input,WS,FOLLOW_WS_in_seccion60); 
 							}
@@ -260,13 +260,13 @@ public class bibliotecaParser extends Parser {
 
 
 	// $ANTLR start "registrosLibros"
-	// biblioteca.g:13:1: registrosLibros : ( libro )+ ;
+	// .\\biblioteca.g:13:1: registrosLibros : ( libro )+ ;
 	public final void registrosLibros() throws RecognitionException {
 		try {
-			// biblioteca.g:13:16: ( ( libro )+ )
-			// biblioteca.g:13:18: ( libro )+
+			// .\\biblioteca.g:13:16: ( ( libro )+ )
+			// .\\biblioteca.g:13:18: ( libro )+
 			{
-			// biblioteca.g:13:18: ( libro )+
+			// .\\biblioteca.g:13:18: ( libro )+
 			int cnt9=0;
 			loop9:
 			while (true) {
@@ -278,7 +278,7 @@ public class bibliotecaParser extends Parser {
 
 				switch (alt9) {
 				case 1 :
-					// biblioteca.g:13:19: libro
+					// .\\biblioteca.g:13:19: libro
 					{
 					pushFollow(FOLLOW_libro_in_registrosLibros75);
 					libro();
@@ -311,7 +311,7 @@ public class bibliotecaParser extends Parser {
 
 
 	// $ANTLR start "libro"
-	// biblioteca.g:15:1: libro : id= INT COMMA nombre= STRING COMMA editorial= STRING COMMA autor= STRING COMMA genero= STRING COMMA paisAutor= STRING COMMA numeroPaginas= INT COMMA anioEdicion= DATE COMMA precio= DOUBLE ;
+	// .\\biblioteca.g:15:1: libro : id= INT COMMA nombre= STRING COMMA editorial= STRING COMMA autor= STRING COMMA genero= STRING COMMA paisAutor= STRING COMMA numeroPaginas= INT COMMA anioEdicion= DATE COMMA precio= DOUBLE ;
 	public final void libro() throws RecognitionException {
 		Token id=null;
 		Token nombre=null;
@@ -324,8 +324,8 @@ public class bibliotecaParser extends Parser {
 		Token precio=null;
 
 		try {
-			// biblioteca.g:16:5: (id= INT COMMA nombre= STRING COMMA editorial= STRING COMMA autor= STRING COMMA genero= STRING COMMA paisAutor= STRING COMMA numeroPaginas= INT COMMA anioEdicion= DATE COMMA precio= DOUBLE )
-			// biblioteca.g:16:7: id= INT COMMA nombre= STRING COMMA editorial= STRING COMMA autor= STRING COMMA genero= STRING COMMA paisAutor= STRING COMMA numeroPaginas= INT COMMA anioEdicion= DATE COMMA precio= DOUBLE
+			// .\\biblioteca.g:16:5: (id= INT COMMA nombre= STRING COMMA editorial= STRING COMMA autor= STRING COMMA genero= STRING COMMA paisAutor= STRING COMMA numeroPaginas= INT COMMA anioEdicion= DATE COMMA precio= DOUBLE )
+			// .\\biblioteca.g:16:7: id= INT COMMA nombre= STRING COMMA editorial= STRING COMMA autor= STRING COMMA genero= STRING COMMA paisAutor= STRING COMMA numeroPaginas= INT COMMA anioEdicion= DATE COMMA precio= DOUBLE
 			{
 			id=(Token)match(input,INT,FOLLOW_INT_in_libro91); 
 			match(input,COMMA,FOLLOW_COMMA_in_libro93); 
@@ -349,7 +349,6 @@ public class bibliotecaParser extends Parser {
 			        System.out.println("<!-- Instancia libro -->");
 			        System.out.println("<rdf:Description rdf:about=\"#codigoLibro "+(id!=null?id.getText():null)+"\">");
 			        System.out.println("  <rdf:type rdf:resource=\"#Libro\" />");
-			        System.out.println("  <biblioteca:codigoLibro>"+(id!=null?id.getText():null)+"</biblioteca:codigoLibro>");
 			        System.out.println("  <biblioteca:nombreLibro>"+(nombre!=null?nombre.getText():null)+"</biblioteca:nombreLibro>");
 			        System.out.println("  <biblioteca:editorial>"+(editorial!=null?editorial.getText():null)+"</biblioteca:editorial>");
 			        System.out.println("  <biblioteca:autor>"+(autor!=null?autor.getText():null)+"</biblioteca:autor>");
@@ -376,13 +375,13 @@ public class bibliotecaParser extends Parser {
 
 
 	// $ANTLR start "registrosUsuarios"
-	// biblioteca.g:43:1: registrosUsuarios : ( usuario )+ ;
+	// .\\biblioteca.g:42:1: registrosUsuarios : ( usuario )+ ;
 	public final void registrosUsuarios() throws RecognitionException {
 		try {
-			// biblioteca.g:43:18: ( ( usuario )+ )
-			// biblioteca.g:43:20: ( usuario )+
+			// .\\biblioteca.g:42:18: ( ( usuario )+ )
+			// .\\biblioteca.g:42:20: ( usuario )+
 			{
-			// biblioteca.g:43:20: ( usuario )+
+			// .\\biblioteca.g:42:20: ( usuario )+
 			int cnt10=0;
 			loop10:
 			while (true) {
@@ -394,7 +393,7 @@ public class bibliotecaParser extends Parser {
 
 				switch (alt10) {
 				case 1 :
-					// biblioteca.g:43:21: usuario
+					// .\\biblioteca.g:42:21: usuario
 					{
 					pushFollow(FOLLOW_usuario_in_registrosUsuarios202);
 					usuario();
@@ -427,7 +426,7 @@ public class bibliotecaParser extends Parser {
 
 
 	// $ANTLR start "usuario"
-	// biblioteca.g:45:1: usuario : id= INT COMMA nombre= STRING COMMA apellido= STRING COMMA ine= INT COMMA domicilio= STRING COMMA estado= STRING COMMA municipio= STRING COMMA nacimiento= DATE ;
+	// .\\biblioteca.g:44:1: usuario : id= INT COMMA nombre= STRING COMMA apellido= STRING COMMA ine= INT COMMA domicilio= STRING COMMA estado= STRING COMMA municipio= STRING COMMA nacimiento= DATE ;
 	public final void usuario() throws RecognitionException {
 		Token id=null;
 		Token nombre=null;
@@ -439,8 +438,8 @@ public class bibliotecaParser extends Parser {
 		Token nacimiento=null;
 
 		try {
-			// biblioteca.g:45:8: (id= INT COMMA nombre= STRING COMMA apellido= STRING COMMA ine= INT COMMA domicilio= STRING COMMA estado= STRING COMMA municipio= STRING COMMA nacimiento= DATE )
-			// biblioteca.g:46:7: id= INT COMMA nombre= STRING COMMA apellido= STRING COMMA ine= INT COMMA domicilio= STRING COMMA estado= STRING COMMA municipio= STRING COMMA nacimiento= DATE
+			// .\\biblioteca.g:44:8: (id= INT COMMA nombre= STRING COMMA apellido= STRING COMMA ine= INT COMMA domicilio= STRING COMMA estado= STRING COMMA municipio= STRING COMMA nacimiento= DATE )
+			// .\\biblioteca.g:45:7: id= INT COMMA nombre= STRING COMMA apellido= STRING COMMA ine= INT COMMA domicilio= STRING COMMA estado= STRING COMMA municipio= STRING COMMA nacimiento= DATE
 			{
 			id=(Token)match(input,INT,FOLLOW_INT_in_usuario220); 
 			match(input,COMMA,FOLLOW_COMMA_in_usuario222); 
@@ -462,7 +461,6 @@ public class bibliotecaParser extends Parser {
 			        System.out.println("<!-- Instancia usuario -->");
 			        System.out.println("<rdf:Description rdf:about=\"#"+(id!=null?id.getText():null)+"\">");
 			        System.out.println("  <rdf:type rdf:resource=\"#Usuario\" />");
-			        System.out.println("  <biblioteca:codigoUsuario>"+(id!=null?id.getText():null)+"</biblioteca:codigoUsuario>");
 			        System.out.println("  <biblioteca:nombre>"+(nombre!=null?nombre.getText():null)+"</biblioteca:nombre>");
 			        System.out.println("  <biblioteca:apellidos>"+(apellido!=null?apellido.getText():null)+"</biblioteca:apellidos>");
 			        System.out.println("  <biblioteca:noIdentificacion>"+(ine!=null?ine.getText():null)+"</biblioteca:noIdentificacion>");
@@ -488,13 +486,13 @@ public class bibliotecaParser extends Parser {
 
 
 	// $ANTLR start "registrosPrestamos"
-	// biblioteca.g:71:1: registrosPrestamos : ( prestamo )+ ;
+	// .\\biblioteca.g:69:1: registrosPrestamos : ( prestamo )+ ;
 	public final void registrosPrestamos() throws RecognitionException {
 		try {
-			// biblioteca.g:71:19: ( ( prestamo )+ )
-			// biblioteca.g:71:21: ( prestamo )+
+			// .\\biblioteca.g:69:19: ( ( prestamo )+ )
+			// .\\biblioteca.g:69:21: ( prestamo )+
 			{
-			// biblioteca.g:71:21: ( prestamo )+
+			// .\\biblioteca.g:69:21: ( prestamo )+
 			int cnt11=0;
 			loop11:
 			while (true) {
@@ -506,7 +504,7 @@ public class bibliotecaParser extends Parser {
 
 				switch (alt11) {
 				case 1 :
-					// biblioteca.g:71:22: prestamo
+					// .\\biblioteca.g:69:22: prestamo
 					{
 					pushFollow(FOLLOW_prestamo_in_registrosPrestamos319);
 					prestamo();
@@ -539,7 +537,7 @@ public class bibliotecaParser extends Parser {
 
 
 	// $ANTLR start "prestamo"
-	// biblioteca.g:73:1: prestamo : numeroPedido= INT COMMA codigoLibro= INT COMMA codigoUsuario= INT COMMA fechaSalida= DATE COMMA fechaMaxima= DATE COMMA fechaDevolucion= DATE ;
+	// .\\biblioteca.g:71:1: prestamo : numeroPedido= INT COMMA codigoLibro= INT COMMA codigoUsuario= INT COMMA fechaSalida= DATE COMMA fechaMaxima= DATE COMMA fechaDevolucion= DATE ;
 	public final void prestamo() throws RecognitionException {
 		Token numeroPedido=null;
 		Token codigoLibro=null;
@@ -549,8 +547,8 @@ public class bibliotecaParser extends Parser {
 		Token fechaDevolucion=null;
 
 		try {
-			// biblioteca.g:73:9: (numeroPedido= INT COMMA codigoLibro= INT COMMA codigoUsuario= INT COMMA fechaSalida= DATE COMMA fechaMaxima= DATE COMMA fechaDevolucion= DATE )
-			// biblioteca.g:74:7: numeroPedido= INT COMMA codigoLibro= INT COMMA codigoUsuario= INT COMMA fechaSalida= DATE COMMA fechaMaxima= DATE COMMA fechaDevolucion= DATE
+			// .\\biblioteca.g:71:9: (numeroPedido= INT COMMA codigoLibro= INT COMMA codigoUsuario= INT COMMA fechaSalida= DATE COMMA fechaMaxima= DATE COMMA fechaDevolucion= DATE )
+			// .\\biblioteca.g:72:7: numeroPedido= INT COMMA codigoLibro= INT COMMA codigoUsuario= INT COMMA fechaSalida= DATE COMMA fechaMaxima= DATE COMMA fechaDevolucion= DATE
 			{
 			numeroPedido=(Token)match(input,INT,FOLLOW_INT_in_prestamo336); 
 			match(input,COMMA,FOLLOW_COMMA_in_prestamo338); 

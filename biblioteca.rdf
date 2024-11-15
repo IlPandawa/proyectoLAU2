@@ -5,13 +5,13 @@
 <rdf:RDF 
      xmlns:rdf   ="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:rdfs  ="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:biblioteca="http://www.proyecto.com/biblioteca#"
      xml:base    ="http://www.proyecto.com/biblioteca#">
 
 <!-- Clases de la biblioteca -->
 <rdfs:Class rdf:about="http://www.proyecto.com/biblioteca#Libro"/>
 <rdfs:Class rdf:about="http://www.proyecto.com/biblioteca#Prestamo"/>
 <rdfs:Class rdf:about="http://www.proyecto.com/biblioteca#Usuario"/>
-
 
 <!-- Propiedades de la clase Libro -->
 <rdf:Property rdf:about="#codigoLibro">
