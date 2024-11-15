@@ -1,6 +1,3 @@
-
-gramaticas/gramLibro.tokens
-gramaticas/gramLibroLexer$DFA4.class
-gramaticas/gramLibroLexer.class
-gramaticas/gramLibroParser.class
-gramaticas/TestLibro.class
+*.tokens
+*.class
+/gramaticas/.antlr

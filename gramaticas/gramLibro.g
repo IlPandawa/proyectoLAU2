@@ -12,7 +12,7 @@ numeroPaginas = INT COMMA
 anioEdicion = DATE COMMA
 precio = DOUBLE {
         // Generación de RDF con base en los valores extraídos
-        System.out.println("<rdf:Description rdf:about=\"#"+$id.text+"\">");
+        System.out.println("<rdf:Description rdf:about=\"#codigoLibro "+$id.text+"\">");
         System.out.println("  <rdf:type rdf:resource=\"#Libro\" />");
         System.out.println("  <biblioteca:codigoLibro>"+$id.text+"</biblioteca:codigoLibro>");
         System.out.println("  <biblioteca:nombreLibro>"+$nombre.text+"</biblioteca:nombreLibro>");
