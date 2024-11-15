@@ -4,9 +4,9 @@ inicio: seccion+;
 
 // Por seccion debe de procesar cada tipo de instancia (libro, usuario, prestamo)
 seccion
-    : 'Libros' WS? registrosLibros?
-    | 'Usuarios' WS? registrosUsuarios?
-    | 'Prestamos' WS? registrosPrestamos?
+    : 'Libros' WS? registrosLibros?  WS?
+    | 'Usuarios' WS? registrosUsuarios?  WS?
+    | 'Prestamos' WS? registrosPrestamos?  WS?
     ;
 
 // Registros de Libros
