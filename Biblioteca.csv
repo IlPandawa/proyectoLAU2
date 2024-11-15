@@ -1,0 +1,33 @@
+Libros
+1,La Chica del Tren,Editorial Planeta,Paula Hawkins,Suspenso,Reino Unido,395,13/01/2015,22.99
+2,El Codigo Da Vinci,Editorial Random House,Dan Brown,Suspenso,Estados Unidos,489,18/03/2003,20.5
+3,Los Juegos del Hambre,Editorial Scholastic,Suzanne Collins,Ciencia Ficcion,Estados Unidos,374,14/09/2008,17.99
+4,Sapiens De Animales a Dioses,Editorial Debate,Yuval Noah Harari,Historia,Israel,498,04/09/2011,24.99
+5,La Sombra del Viento,Editorial Planeta,Carlos Ruiz Zafon,Ficcion,Espana,567,06/04/2001,19.75
+6,Ciudades de Papel,Editorial Nube de Tinta,John Green,Juvenil,Estados Unidos,368,16/10/2008,15.99
+7,La Casa de los Espiritus,Editorial Plaza Y Janes,Isabel Allende,Ficcion,Chile,490,26/09/1982,21.5
+8,Cometas en el Cielo,Editorial Salamandra,Khaled Hosseini,Drama,Afganistan,371,29/05/2003,18.95
+9,La Ladrona de Libros,Editorial Lumen,Markus Zusak,Historica,Australia,584,14/03/2005,17.5
+10,Ready Player One,Editorial Crown,Ernest Cline,Ciencia Ficcion,Estados Unidos,374,16/08/2011,19.99
+Usuarios
+101,Juan,Perez,8765432101234,Calle Falsa 123,CDMX,Ciudad de Mexico,15/02/1990
+102,Ana,Gomez,2345678901234,Avenida Siempre Viva 742,CDMX,Ciudad de Mexico,25/06/1985
+103,Luis,Martinez,1234567890123,Calle Principal 456,Queretaro,Queretaro,30/11/1992
+104,Maria,Fernandez,3456789012345,Calle Secundaria 789,Jalisco,Guadalajara,10/09/1988
+105,Carlos,Ramirez,9012345678901,Boulevard del Sol 321,CDMX,Ciudad de Mexico,20/08/1995
+106,Laura,Jimenez,5678901234567,Callejon del Beso 234,Queretaro,Queretaro,12/03/1990
+107,Pablo,Nunez,6789012345678,Calle de la Paz 145,Estado de Mexico,Toluca,19/07/1993
+108,Sofia,Rojas,7890123456789,Residencial Sol 456,CDMX,Ciudad de Mexico,25/01/1986
+109,Andres,Mendoza,8901234567890,Calle Jardin 567,Jalisco,Guadalajara,15/11/1984
+110,Lucia,Sanchez,0123456789012,Avenida Primavera 789,CDMX,Ciudad de Mexico,05/05/1991
+Prestamos
+1,1,101,01/10/2024,15/10/2024,14/10/2024
+2,2,102,05/10/2024,20/10/2024,18/10/2024
+3,3,103,10/10/2024,24/10/2024,23/10/2024
+4,4,104,12/10/2024,26/10/2024,25/10/2024
+5,5,105,15/10/2024,30/10/2024,04/11/2024
+6,6,106,20/10/2024,03/11/2024,01/11/2024
+7,7,107,21/10/2024,05/11/2024,04/11/2024
+8,8,108,25/10/2024,09/11/2024,07/11/2024
+9,9,109,27/10/2024,11/11/2024,04/11/2024
+10,10,110,30/10/2024,13/11/2024,04/11/2024
