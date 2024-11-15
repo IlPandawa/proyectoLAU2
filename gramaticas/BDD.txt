@@ -1,0 +1,35 @@
+crear biblioteca
+usar biblioteca
+tabla libro
+    inicio
+        codigoLibro numeros
+        nombreLibro letras
+        editorial letras
+        autor letras
+        genero letras
+        paisAutor letras
+        numeroPaginas numeros
+        anioEdicion fecha
+        precio numeros
+    fin
+tabla usuario
+    inicio
+        codigoUsuario numeros
+        nombre letras
+        apellidos letras
+        noIdentificacion letras
+        domicilio letras
+        estado letras
+        municipio letras
+        fechaNacimiento fecha
+    fin
+tabla prestamo
+    inicio
+        numeroPedido numeros
+        codigoLibro numeros
+        codigoUsuario numeros
+        fechaSalida fecha
+        fechaMaxima fecha
+        fechaDevolucion fecha
+    fin    
+cerrar    
