@@ -80,12 +80,12 @@
                       <Component id="jScrollPane1" min="-2" pref="586" max="-2" attributes="0"/>
                       <EmptySpace type="unrelated" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="radioSintactico" min="-2" max="-2" attributes="0"/>
+                          <Component id="radioSQL" min="-2" max="-2" attributes="0"/>
                           <Component id="radioBiblioteca" alignment="0" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
-              <EmptySpace pref="55" max="32767" attributes="0"/>
+              <EmptySpace pref="62" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -109,7 +109,7 @@
                   </Group>
                   <Group type="102" alignment="0" attributes="0">
                       <EmptySpace min="-2" pref="20" max="-2" attributes="0"/>
-                      <Component id="radioSintactico" min="-2" max="-2" attributes="0"/>
+                      <Component id="radioSQL" min="-2" max="-2" attributes="0"/>
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="radioBiblioteca" min="-2" max="-2" attributes="0"/>
                   </Group>
@@ -181,7 +181,7 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnThemeActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JRadioButton" name="radioSintactico">
+    <Component class="javax.swing.JRadioButton" name="radioSQL">
       <Properties>
         <Property name="buttonGroup" type="javax.swing.ButtonGroup" editor="org.netbeans.modules.form.RADComponent$ButtonGroupPropertyEditor">
           <ComponentRef name="buttonGroup1"/>
@@ -189,7 +189,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Segoe UI" size="14" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="aSintactico"/>
+        <Property name="text" type="java.lang.String" value="SQL"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JRadioButton" name="radioBiblioteca">
