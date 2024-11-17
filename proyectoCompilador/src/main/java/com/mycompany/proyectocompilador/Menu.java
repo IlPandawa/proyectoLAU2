@@ -20,6 +20,9 @@ import java.awt.Font;
 import java.awt.Image;
 import java.awt.Panel;
 import java.awt.Toolkit;
+import java.awt.datatransfer.StringSelection;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import java.io.File;
 import java.io.FileReader;
@@ -27,6 +30,7 @@ import java.io.IOException;
 import java.io.StringBufferInputStream;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
@@ -82,7 +86,7 @@ public class Menu extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 3, 48)); // NOI18N
         jLabel1.setText("Compilador");
 
-        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jButton2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton2.setText("Compilar");
         jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -94,7 +98,7 @@ public class Menu extends javax.swing.JFrame {
         tAreaCasoPrueba.setRows(5);
         jScrollPane1.setViewportView(tAreaCasoPrueba);
 
-        jButton4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jButton4.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jButton4.setText("Vaciar");
         jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -102,6 +106,7 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
+        btnTheme.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         btnTheme.setText("Dia");
         btnTheme.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -110,9 +115,11 @@ public class Menu extends javax.swing.JFrame {
         });
 
         buttonGroup1.add(radioSintactico);
+        radioSintactico.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         radioSintactico.setText("aSintactico");
 
         buttonGroup1.add(radioBiblioteca);
+        radioBiblioteca.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         radioBiblioteca.setSelected(true);
         radioBiblioteca.setText("biblioteca");
 
@@ -155,7 +162,7 @@ public class Menu extends javax.swing.JFrame {
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(radioSintactico)
                             .addComponent(radioBiblioteca))))
-                .addContainerGap(62, Short.MAX_VALUE))
+                .addContainerGap(55, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -180,41 +187,58 @@ public class Menu extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
                     .addComponent(jButton4))
-                .addContainerGap(67, Short.MAX_VALUE))
+                .addContainerGap(72, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
-        //Info info = new Info();
-        //GlassPanePopup.showPopup(new Info("Aqui voy a enviar los errores o aprobaciones"));
-
-        // Crear el panel
-        JPanel panel = new JPanel();
+        // Crear el panel con BorderLayout
+        JPanel panel = new JPanel(new BorderLayout());
         panel.setPreferredSize(new Dimension(460, 375)); // Establecer el tamaño del panel
-        //panel.setLayout(new BorderLayout()); // Usamos BorderLayout para organizar los componentes
 
         // Crear el título
         JLabel titulo = new JLabel("Resultados", SwingConstants.CENTER); // Texto centrado
-        titulo.setFont(new Font("Serif", Font.BOLD | Font.ITALIC, 48)); // Establecer fuente Bold Italic tamaño 48
+        titulo.setFont(new Font("Serif", Font.BOLD | Font.ITALIC, 48)); // Fuente Bold Italic tamaño 48
 
-        // Crear el área de texto
+        // Crear el JTextArea
         JTextArea textArea = new JTextArea();
-        textArea.setPreferredSize(new Dimension(350, 200));
-
-        textArea.setRows(15); // Establecer 10 filas visibles para el área de texto
+        textArea.setRows(15); // Establecer 15 filas visibles para el área de texto
         textArea.setLineWrap(true); // Ajuste de línea
-        textArea.setEditable(false);
         textArea.setWrapStyleWord(true); // Ajuste por palabras
-        JScrollPane scrollPane = new JScrollPane(textArea); // Agregar scroll al TextArea
+        textArea.setEditable(false);
+
+        // Agregar el JTextArea a un JScrollPane
+        JScrollPane scrollPane = new JScrollPane(textArea);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED);
+        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_NEVER);
 
         // Agregar el título y el área de texto al panel
         panel.add(titulo, BorderLayout.NORTH); // Título arriba (NORTH)
-        panel.add(scrollPane, BorderLayout.CENTER); // Área de texto en el centro (CENTER)
+        panel.add(scrollPane, BorderLayout.CENTER); // Área de texto con scroll en el centro
 
+        JButton copiarButton = new JButton("Copiar");
+        copiarButton.setFont(new Font("Arial", Font.BOLD, 16));
+        copiarButton.setPreferredSize(new Dimension(100, 30));
+        copiarButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Copiar el texto del JTextArea al portapapeles
+                String contenido = textArea.getText();
+                if (!contenido.isEmpty()) {
+                    Toolkit.getDefaultToolkit().getSystemClipboard().setContents(new StringSelection(contenido), null);
+                    Notifications.getInstance().show(Notifications.Type.SUCCESS, Notifications.Location.BOTTOM_RIGHT, 1000, "Texto Copiado en el portapapeles.");
+                } else {
+                    Notifications.getInstance().show(Notifications.Type.SUCCESS, Notifications.Location.BOTTOM_RIGHT, 1000, "Texto Copiado en el portapapeles.");
+
+                }
+            }
+        });
+
+        panel.add(copiarButton, BorderLayout.SOUTH); // Botón en la parte inferior (SOUTH)
+        // Agregar el panel al JFrame
         add(panel);
-
         //taSalida.setText("");
         ANTLRInputStream input = null;
         String s = "";

@@ -1,10 +1,13 @@
 jnafilechooser\api\JnaFileChooser.class
 com\mycompany\proyectocompilador\Menu$1.class
+com\mycompany\proyectocompilador\antlrG00\bibliotecaLexer$DFA4.class
 com\mycompany\proyectocompilador\Info.class
 com\mycompany\proyectocompilador\Menu.class
 com\mycompany\proyectocompilador\Menu$5.class
 com\mycompany\proyectocompilador\ProyectoCompilador.class
+com\mycompany\proyectocompilador\Menu$6.class
 com\mycompany\proyectocompilador\antlrG00\aSintactico_V4Parser$type_return.class
+com\mycompany\proyectocompilador\antlrG00\bibliotecaLexer.class
 com\mycompany\proyectocompilador\Menu$3.class
 jnafilechooser\api\WindowsFolderBrowser.class
 jnafilechooser\win32\Comdlg32.class
@@ -22,4 +25,5 @@ jnafilechooser\api\JnaFileChooser$Action.class
 com\mycompany\proyectocompilador\antlrG00\aSintactico_V4Lexer$DFA4.class
 com\mycompany\proyectocompilador\Menu$2.class
 jnafilechooser\win32\Ole32.class
+com\mycompany\proyectocompilador\antlrG00\bibliotecaParser.class
 com\mycompany\proyectocompilador\antlrG00\aSintactico_V4Parser$atom_return.class
