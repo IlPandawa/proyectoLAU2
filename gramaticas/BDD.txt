@@ -1,5 +1,4 @@
 crear biblioteca
-usar biblioteca
 tabla libro
     inicio
         codigoLibro numeros
