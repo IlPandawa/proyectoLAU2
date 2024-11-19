@@ -11,6 +11,8 @@ import com.mycompany.proyectocompilador.antlrG00.aSintactico_V4Lexer;
 import com.mycompany.proyectocompilador.antlrG00.aSintactico_V4Parser;
 import com.mycompany.proyectocompilador.antlrG00.bibliotecaLexer;
 import com.mycompany.proyectocompilador.antlrG00.bibliotecaParser;
+import com.mycompany.proyectocompilador.antlrG00.gramRDFLexer;
+import com.mycompany.proyectocompilador.antlrG00.gramRDFParser;
 import java.awt.Image;
 import java.awt.Toolkit;
 import raven.glasspanepopup.GlassPanePopup;
@@ -74,7 +76,7 @@ public class Menu extends javax.swing.JFrame {
         tAreaCasoPrueba = new javax.swing.JTextArea();
         jButton4 = new javax.swing.JButton();
         btnTheme = new javax.swing.JButton();
-        radioSQL = new javax.swing.JRadioButton();
+        radioRDF = new javax.swing.JRadioButton();
         radioBiblioteca = new javax.swing.JRadioButton();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu2 = new javax.swing.JMenu();
@@ -116,9 +118,9 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        buttonGroup1.add(radioSQL);
-        radioSQL.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        radioSQL.setText("SQL");
+        buttonGroup1.add(radioRDF);
+        radioRDF.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        radioRDF.setText("RDF");
 
         buttonGroup1.add(radioBiblioteca);
         radioBiblioteca.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -162,7 +164,7 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 586, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(radioSQL)
+                            .addComponent(radioRDF)
                             .addComponent(radioBiblioteca))))
                 .addContainerGap(62, Short.MAX_VALUE))
         );
@@ -182,7 +184,7 @@ public class Menu extends javax.swing.JFrame {
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 314, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(20, 20, 20)
-                        .addComponent(radioSQL)
+                        .addComponent(radioRDF)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(radioBiblioteca)))
                 .addGap(24, 24, 24)
@@ -252,11 +254,11 @@ public class Menu extends javax.swing.JFrame {
             //Logger.getLogger(GUI.class.getName()).log(Level.SEVERE, null, ex);
         }
 
-        if (radioSQL.isSelected()) {
+        if (radioRDF.isSelected()) {
             System.out.println("Sintactico");
-            T2Lexer lexer = new T2Lexer(input);
+            gramRDFLexer lexer = new gramRDFLexer(input);
             CommonTokenStream tokens = new CommonTokenStream(lexer);
-            T2Parser parser = new T2Parser(tokens);
+            gramRDFParser parser = new gramRDFParser(tokens);
             parser.setSalida(textArea);
 
             try {
@@ -354,7 +356,7 @@ public class Menu extends javax.swing.JFrame {
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JRadioButton radioBiblioteca;
-    private javax.swing.JRadioButton radioSQL;
+    private javax.swing.JRadioButton radioRDF;
     private javax.swing.JTextArea tAreaCasoPrueba;
     // End of variables declaration//GEN-END:variables
 }
