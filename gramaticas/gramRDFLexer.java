@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 .\\gramRDF.g 2024-11-18 14:51:55
+// $ANTLR 3.5.2 .\\gramRDF.g 2024-11-25 11:28:40
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -17,8 +17,7 @@ public class gramRDFLexer extends Lexer {
 	public static final int INICIO=10;
 	public static final int NUMERICO=11;
 	public static final int TABLA=12;
-	public static final int USAR=13;
-	public static final int WS=14;
+	public static final int WS=13;
 
 	// delegates
 	// delegators
@@ -40,8 +39,8 @@ public class gramRDFLexer extends Lexer {
 		try {
 			int _type = CERRAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// .\\gramRDF.g:54:7: ( 'cerrar' )
-			// .\\gramRDF.g:54:9: 'cerrar'
+			// .\\gramRDF.g:53:7: ( 'cerrar' )
+			// .\\gramRDF.g:53:9: 'cerrar'
 			{
 			match("cerrar"); 
 
@@ -61,8 +60,8 @@ public class gramRDFLexer extends Lexer {
 		try {
 			int _type = NUMERICO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// .\\gramRDF.g:55:9: ( 'numeros' )
-			// .\\gramRDF.g:55:11: 'numeros'
+			// .\\gramRDF.g:54:9: ( 'numeros' )
+			// .\\gramRDF.g:54:11: 'numeros'
 			{
 			match("numeros"); 
 
@@ -82,8 +81,8 @@ public class gramRDFLexer extends Lexer {
 		try {
 			int _type = ALFABETICO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// .\\gramRDF.g:56:11: ( 'letras' )
-			// .\\gramRDF.g:56:13: 'letras'
+			// .\\gramRDF.g:55:11: ( 'letras' )
+			// .\\gramRDF.g:55:13: 'letras'
 			{
 			match("letras"); 
 
@@ -103,8 +102,8 @@ public class gramRDFLexer extends Lexer {
 		try {
 			int _type = FECHA;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// .\\gramRDF.g:57:6: ( 'fecha' )
-			// .\\gramRDF.g:57:8: 'fecha'
+			// .\\gramRDF.g:56:6: ( 'fecha' )
+			// .\\gramRDF.g:56:8: 'fecha'
 			{
 			match("fecha"); 
 
@@ -124,8 +123,8 @@ public class gramRDFLexer extends Lexer {
 		try {
 			int _type = TABLA;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// .\\gramRDF.g:58:6: ( 'tabla' )
-			// .\\gramRDF.g:58:8: 'tabla'
+			// .\\gramRDF.g:57:6: ( 'tabla' )
+			// .\\gramRDF.g:57:8: 'tabla'
 			{
 			match("tabla"); 
 
@@ -145,8 +144,8 @@ public class gramRDFLexer extends Lexer {
 		try {
 			int _type = INICIO;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// .\\gramRDF.g:59:7: ( 'inicio' )
-			// .\\gramRDF.g:59:9: 'inicio'
+			// .\\gramRDF.g:58:7: ( 'inicio' )
+			// .\\gramRDF.g:58:9: 'inicio'
 			{
 			match("inicio"); 
 
@@ -166,8 +165,8 @@ public class gramRDFLexer extends Lexer {
 		try {
 			int _type = FIN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// .\\gramRDF.g:60:4: ( 'fin' )
-			// .\\gramRDF.g:60:6: 'fin'
+			// .\\gramRDF.g:59:4: ( 'fin' )
+			// .\\gramRDF.g:59:6: 'fin'
 			{
 			match("fin"); 
 
@@ -182,34 +181,13 @@ public class gramRDFLexer extends Lexer {
 	}
 	// $ANTLR end "FIN"
 
-	// $ANTLR start "USAR"
-	public final void mUSAR() throws RecognitionException {
-		try {
-			int _type = USAR;
-			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// .\\gramRDF.g:61:5: ( 'usar' )
-			// .\\gramRDF.g:61:7: 'usar'
-			{
-			match("usar"); 
-
-			}
-
-			state.type = _type;
-			state.channel = _channel;
-		}
-		finally {
-			// do for sure before leaving
-		}
-	}
-	// $ANTLR end "USAR"
-
 	// $ANTLR start "CREAR"
 	public final void mCREAR() throws RecognitionException {
 		try {
 			int _type = CREAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// .\\gramRDF.g:62:6: ( 'crear' )
-			// .\\gramRDF.g:62:8: 'crear'
+			// .\\gramRDF.g:60:6: ( 'crear' )
+			// .\\gramRDF.g:60:8: 'crear'
 			{
 			match("crear"); 
 
@@ -229,8 +207,8 @@ public class gramRDFLexer extends Lexer {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// .\\gramRDF.g:63:3: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-			// .\\gramRDF.g:63:5: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+			// .\\gramRDF.g:61:3: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+			// .\\gramRDF.g:61:5: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
@@ -240,7 +218,7 @@ public class gramRDFLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// .\\gramRDF.g:63:35: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+			// .\\gramRDF.g:61:37: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
 			loop1:
 			while (true) {
 				int alt1=2;
@@ -285,10 +263,10 @@ public class gramRDFLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// .\\gramRDF.g:69:3: ( ( ' ' | '\\n' | '\\t' | '\\r' )+ )
-			// .\\gramRDF.g:69:5: ( ' ' | '\\n' | '\\t' | '\\r' )+
+			// .\\gramRDF.g:62:3: ( ( ' ' | '\\n' | '\\t' | '\\r' )+ )
+			// .\\gramRDF.g:62:5: ( ' ' | '\\n' | '\\t' | '\\r' )+
 			{
-			// .\\gramRDF.g:69:5: ( ' ' | '\\n' | '\\t' | '\\r' )+
+			// .\\gramRDF.g:62:5: ( ' ' | '\\n' | '\\t' | '\\r' )+
 			int cnt2=0;
 			loop2:
 			while (true) {
@@ -335,25 +313,25 @@ public class gramRDFLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// .\\gramRDF.g:1:8: ( CERRAR | NUMERICO | ALFABETICO | FECHA | TABLA | INICIO | FIN | USAR | CREAR | ID | WS )
-		int alt3=11;
+		// .\\gramRDF.g:1:8: ( CERRAR | NUMERICO | ALFABETICO | FECHA | TABLA | INICIO | FIN | CREAR | ID | WS )
+		int alt3=10;
 		switch ( input.LA(1) ) {
 		case 'c':
 			{
 			switch ( input.LA(2) ) {
 			case 'e':
 				{
-				int LA3_10 = input.LA(3);
-				if ( (LA3_10=='r') ) {
-					int LA3_19 = input.LA(4);
-					if ( (LA3_19=='r') ) {
-						int LA3_28 = input.LA(5);
-						if ( (LA3_28=='a') ) {
-							int LA3_37 = input.LA(6);
-							if ( (LA3_37=='r') ) {
-								int LA3_45 = input.LA(7);
-								if ( ((LA3_45 >= '0' && LA3_45 <= '9')||(LA3_45 >= 'A' && LA3_45 <= 'Z')||LA3_45=='_'||(LA3_45 >= 'a' && LA3_45 <= 'z')) ) {
-									alt3=10;
+				int LA3_9 = input.LA(3);
+				if ( (LA3_9=='r') ) {
+					int LA3_17 = input.LA(4);
+					if ( (LA3_17=='r') ) {
+						int LA3_25 = input.LA(5);
+						if ( (LA3_25=='a') ) {
+							int LA3_33 = input.LA(6);
+							if ( (LA3_33=='r') ) {
+								int LA3_40 = input.LA(7);
+								if ( ((LA3_40 >= '0' && LA3_40 <= '9')||(LA3_40 >= 'A' && LA3_40 <= 'Z')||LA3_40=='_'||(LA3_40 >= 'a' && LA3_40 <= 'z')) ) {
+									alt3=9;
 								}
 
 								else {
@@ -363,68 +341,68 @@ public class gramRDFLexer extends Lexer {
 							}
 
 							else {
-								alt3=10;
-							}
-
-						}
-
-						else {
-							alt3=10;
-						}
-
-					}
-
-					else {
-						alt3=10;
-					}
-
-				}
-
-				else {
-					alt3=10;
-				}
-
-				}
-				break;
-			case 'r':
-				{
-				int LA3_11 = input.LA(3);
-				if ( (LA3_11=='e') ) {
-					int LA3_20 = input.LA(4);
-					if ( (LA3_20=='a') ) {
-						int LA3_29 = input.LA(5);
-						if ( (LA3_29=='r') ) {
-							int LA3_38 = input.LA(6);
-							if ( ((LA3_38 >= '0' && LA3_38 <= '9')||(LA3_38 >= 'A' && LA3_38 <= 'Z')||LA3_38=='_'||(LA3_38 >= 'a' && LA3_38 <= 'z')) ) {
-								alt3=10;
-							}
-
-							else {
 								alt3=9;
 							}
 
 						}
 
 						else {
-							alt3=10;
+							alt3=9;
 						}
 
 					}
 
 					else {
-						alt3=10;
+						alt3=9;
 					}
 
 				}
 
 				else {
-					alt3=10;
+					alt3=9;
+				}
+
+				}
+				break;
+			case 'r':
+				{
+				int LA3_10 = input.LA(3);
+				if ( (LA3_10=='e') ) {
+					int LA3_18 = input.LA(4);
+					if ( (LA3_18=='a') ) {
+						int LA3_26 = input.LA(5);
+						if ( (LA3_26=='r') ) {
+							int LA3_34 = input.LA(6);
+							if ( ((LA3_34 >= '0' && LA3_34 <= '9')||(LA3_34 >= 'A' && LA3_34 <= 'Z')||LA3_34=='_'||(LA3_34 >= 'a' && LA3_34 <= 'z')) ) {
+								alt3=9;
+							}
+
+							else {
+								alt3=8;
+							}
+
+						}
+
+						else {
+							alt3=9;
+						}
+
+					}
+
+					else {
+						alt3=9;
+					}
+
+				}
+
+				else {
+					alt3=9;
 				}
 
 				}
 				break;
 			default:
-				alt3=10;
+				alt3=9;
 			}
 			}
 			break;
@@ -432,19 +410,19 @@ public class gramRDFLexer extends Lexer {
 			{
 			int LA3_2 = input.LA(2);
 			if ( (LA3_2=='u') ) {
-				int LA3_12 = input.LA(3);
-				if ( (LA3_12=='m') ) {
-					int LA3_21 = input.LA(4);
-					if ( (LA3_21=='e') ) {
-						int LA3_30 = input.LA(5);
-						if ( (LA3_30=='r') ) {
-							int LA3_39 = input.LA(6);
-							if ( (LA3_39=='o') ) {
-								int LA3_47 = input.LA(7);
-								if ( (LA3_47=='s') ) {
-									int LA3_53 = input.LA(8);
-									if ( ((LA3_53 >= '0' && LA3_53 <= '9')||(LA3_53 >= 'A' && LA3_53 <= 'Z')||LA3_53=='_'||(LA3_53 >= 'a' && LA3_53 <= 'z')) ) {
-										alt3=10;
+				int LA3_11 = input.LA(3);
+				if ( (LA3_11=='m') ) {
+					int LA3_19 = input.LA(4);
+					if ( (LA3_19=='e') ) {
+						int LA3_27 = input.LA(5);
+						if ( (LA3_27=='r') ) {
+							int LA3_35 = input.LA(6);
+							if ( (LA3_35=='o') ) {
+								int LA3_42 = input.LA(7);
+								if ( (LA3_42=='s') ) {
+									int LA3_48 = input.LA(8);
+									if ( ((LA3_48 >= '0' && LA3_48 <= '9')||(LA3_48 >= 'A' && LA3_48 <= 'Z')||LA3_48=='_'||(LA3_48 >= 'a' && LA3_48 <= 'z')) ) {
+										alt3=9;
 									}
 
 									else {
@@ -454,37 +432,37 @@ public class gramRDFLexer extends Lexer {
 								}
 
 								else {
-									alt3=10;
+									alt3=9;
 								}
 
 							}
 
 							else {
-								alt3=10;
+								alt3=9;
 							}
 
 						}
 
 						else {
-							alt3=10;
+							alt3=9;
 						}
 
 					}
 
 					else {
-						alt3=10;
+						alt3=9;
 					}
 
 				}
 
 				else {
-					alt3=10;
+					alt3=9;
 				}
 
 			}
 
 			else {
-				alt3=10;
+				alt3=9;
 			}
 
 			}
@@ -493,17 +471,17 @@ public class gramRDFLexer extends Lexer {
 			{
 			int LA3_3 = input.LA(2);
 			if ( (LA3_3=='e') ) {
-				int LA3_13 = input.LA(3);
-				if ( (LA3_13=='t') ) {
-					int LA3_22 = input.LA(4);
-					if ( (LA3_22=='r') ) {
-						int LA3_31 = input.LA(5);
-						if ( (LA3_31=='a') ) {
-							int LA3_40 = input.LA(6);
-							if ( (LA3_40=='s') ) {
-								int LA3_48 = input.LA(7);
-								if ( ((LA3_48 >= '0' && LA3_48 <= '9')||(LA3_48 >= 'A' && LA3_48 <= 'Z')||LA3_48=='_'||(LA3_48 >= 'a' && LA3_48 <= 'z')) ) {
-									alt3=10;
+				int LA3_12 = input.LA(3);
+				if ( (LA3_12=='t') ) {
+					int LA3_20 = input.LA(4);
+					if ( (LA3_20=='r') ) {
+						int LA3_28 = input.LA(5);
+						if ( (LA3_28=='a') ) {
+							int LA3_36 = input.LA(6);
+							if ( (LA3_36=='s') ) {
+								int LA3_43 = input.LA(7);
+								if ( ((LA3_43 >= '0' && LA3_43 <= '9')||(LA3_43 >= 'A' && LA3_43 <= 'Z')||LA3_43=='_'||(LA3_43 >= 'a' && LA3_43 <= 'z')) ) {
+									alt3=9;
 								}
 
 								else {
@@ -513,31 +491,31 @@ public class gramRDFLexer extends Lexer {
 							}
 
 							else {
-								alt3=10;
+								alt3=9;
 							}
 
 						}
 
 						else {
-							alt3=10;
+							alt3=9;
 						}
 
 					}
 
 					else {
-						alt3=10;
+						alt3=9;
 					}
 
 				}
 
 				else {
-					alt3=10;
+					alt3=9;
 				}
 
 			}
 
 			else {
-				alt3=10;
+				alt3=9;
 			}
 
 			}
@@ -547,15 +525,15 @@ public class gramRDFLexer extends Lexer {
 			switch ( input.LA(2) ) {
 			case 'e':
 				{
-				int LA3_14 = input.LA(3);
-				if ( (LA3_14=='c') ) {
-					int LA3_23 = input.LA(4);
-					if ( (LA3_23=='h') ) {
-						int LA3_32 = input.LA(5);
-						if ( (LA3_32=='a') ) {
-							int LA3_41 = input.LA(6);
-							if ( ((LA3_41 >= '0' && LA3_41 <= '9')||(LA3_41 >= 'A' && LA3_41 <= 'Z')||LA3_41=='_'||(LA3_41 >= 'a' && LA3_41 <= 'z')) ) {
-								alt3=10;
+				int LA3_13 = input.LA(3);
+				if ( (LA3_13=='c') ) {
+					int LA3_21 = input.LA(4);
+					if ( (LA3_21=='h') ) {
+						int LA3_29 = input.LA(5);
+						if ( (LA3_29=='a') ) {
+							int LA3_37 = input.LA(6);
+							if ( ((LA3_37 >= '0' && LA3_37 <= '9')||(LA3_37 >= 'A' && LA3_37 <= 'Z')||LA3_37=='_'||(LA3_37 >= 'a' && LA3_37 <= 'z')) ) {
+								alt3=9;
 							}
 
 							else {
@@ -565,30 +543,30 @@ public class gramRDFLexer extends Lexer {
 						}
 
 						else {
-							alt3=10;
+							alt3=9;
 						}
 
 					}
 
 					else {
-						alt3=10;
+						alt3=9;
 					}
 
 				}
 
 				else {
-					alt3=10;
+					alt3=9;
 				}
 
 				}
 				break;
 			case 'i':
 				{
-				int LA3_15 = input.LA(3);
-				if ( (LA3_15=='n') ) {
-					int LA3_24 = input.LA(4);
-					if ( ((LA3_24 >= '0' && LA3_24 <= '9')||(LA3_24 >= 'A' && LA3_24 <= 'Z')||LA3_24=='_'||(LA3_24 >= 'a' && LA3_24 <= 'z')) ) {
-						alt3=10;
+				int LA3_14 = input.LA(3);
+				if ( (LA3_14=='n') ) {
+					int LA3_22 = input.LA(4);
+					if ( ((LA3_22 >= '0' && LA3_22 <= '9')||(LA3_22 >= 'A' && LA3_22 <= 'Z')||LA3_22=='_'||(LA3_22 >= 'a' && LA3_22 <= 'z')) ) {
+						alt3=9;
 					}
 
 					else {
@@ -598,13 +576,13 @@ public class gramRDFLexer extends Lexer {
 				}
 
 				else {
-					alt3=10;
+					alt3=9;
 				}
 
 				}
 				break;
 			default:
-				alt3=10;
+				alt3=9;
 			}
 			}
 			break;
@@ -612,15 +590,15 @@ public class gramRDFLexer extends Lexer {
 			{
 			int LA3_5 = input.LA(2);
 			if ( (LA3_5=='a') ) {
-				int LA3_16 = input.LA(3);
-				if ( (LA3_16=='b') ) {
-					int LA3_25 = input.LA(4);
-					if ( (LA3_25=='l') ) {
-						int LA3_34 = input.LA(5);
-						if ( (LA3_34=='a') ) {
-							int LA3_42 = input.LA(6);
-							if ( ((LA3_42 >= '0' && LA3_42 <= '9')||(LA3_42 >= 'A' && LA3_42 <= 'Z')||LA3_42=='_'||(LA3_42 >= 'a' && LA3_42 <= 'z')) ) {
-								alt3=10;
+				int LA3_15 = input.LA(3);
+				if ( (LA3_15=='b') ) {
+					int LA3_23 = input.LA(4);
+					if ( (LA3_23=='l') ) {
+						int LA3_31 = input.LA(5);
+						if ( (LA3_31=='a') ) {
+							int LA3_38 = input.LA(6);
+							if ( ((LA3_38 >= '0' && LA3_38 <= '9')||(LA3_38 >= 'A' && LA3_38 <= 'Z')||LA3_38=='_'||(LA3_38 >= 'a' && LA3_38 <= 'z')) ) {
+								alt3=9;
 							}
 
 							else {
@@ -630,25 +608,25 @@ public class gramRDFLexer extends Lexer {
 						}
 
 						else {
-							alt3=10;
+							alt3=9;
 						}
 
 					}
 
 					else {
-						alt3=10;
+						alt3=9;
 					}
 
 				}
 
 				else {
-					alt3=10;
+					alt3=9;
 				}
 
 			}
 
 			else {
-				alt3=10;
+				alt3=9;
 			}
 
 			}
@@ -657,17 +635,17 @@ public class gramRDFLexer extends Lexer {
 			{
 			int LA3_6 = input.LA(2);
 			if ( (LA3_6=='n') ) {
-				int LA3_17 = input.LA(3);
-				if ( (LA3_17=='i') ) {
-					int LA3_26 = input.LA(4);
-					if ( (LA3_26=='c') ) {
-						int LA3_35 = input.LA(5);
-						if ( (LA3_35=='i') ) {
-							int LA3_43 = input.LA(6);
-							if ( (LA3_43=='o') ) {
-								int LA3_51 = input.LA(7);
-								if ( ((LA3_51 >= '0' && LA3_51 <= '9')||(LA3_51 >= 'A' && LA3_51 <= 'Z')||LA3_51=='_'||(LA3_51 >= 'a' && LA3_51 <= 'z')) ) {
-									alt3=10;
+				int LA3_16 = input.LA(3);
+				if ( (LA3_16=='i') ) {
+					int LA3_24 = input.LA(4);
+					if ( (LA3_24=='c') ) {
+						int LA3_32 = input.LA(5);
+						if ( (LA3_32=='i') ) {
+							int LA3_39 = input.LA(6);
+							if ( (LA3_39=='o') ) {
+								int LA3_46 = input.LA(7);
+								if ( ((LA3_46 >= '0' && LA3_46 <= '9')||(LA3_46 >= 'A' && LA3_46 <= 'Z')||LA3_46=='_'||(LA3_46 >= 'a' && LA3_46 <= 'z')) ) {
+									alt3=9;
 								}
 
 								else {
@@ -677,68 +655,31 @@ public class gramRDFLexer extends Lexer {
 							}
 
 							else {
-								alt3=10;
+								alt3=9;
 							}
 
 						}
 
 						else {
-							alt3=10;
+							alt3=9;
 						}
 
 					}
 
 					else {
-						alt3=10;
+						alt3=9;
 					}
 
 				}
 
 				else {
-					alt3=10;
+					alt3=9;
 				}
 
 			}
 
 			else {
-				alt3=10;
-			}
-
-			}
-			break;
-		case 'u':
-			{
-			int LA3_7 = input.LA(2);
-			if ( (LA3_7=='s') ) {
-				int LA3_18 = input.LA(3);
-				if ( (LA3_18=='a') ) {
-					int LA3_27 = input.LA(4);
-					if ( (LA3_27=='r') ) {
-						int LA3_36 = input.LA(5);
-						if ( ((LA3_36 >= '0' && LA3_36 <= '9')||(LA3_36 >= 'A' && LA3_36 <= 'Z')||LA3_36=='_'||(LA3_36 >= 'a' && LA3_36 <= 'z')) ) {
-							alt3=10;
-						}
-
-						else {
-							alt3=8;
-						}
-
-					}
-
-					else {
-						alt3=10;
-					}
-
-				}
-
-				else {
-					alt3=10;
-				}
-
-			}
-
-			else {
-				alt3=10;
+				alt3=9;
 			}
 
 			}
@@ -784,13 +725,14 @@ public class gramRDFLexer extends Lexer {
 		case 'q':
 		case 'r':
 		case 's':
+		case 'u':
 		case 'v':
 		case 'w':
 		case 'x':
 		case 'y':
 		case 'z':
 			{
-			alt3=10;
+			alt3=9;
 			}
 			break;
 		case '\t':
@@ -798,7 +740,7 @@ public class gramRDFLexer extends Lexer {
 		case '\r':
 		case ' ':
 			{
-			alt3=11;
+			alt3=10;
 			}
 			break;
 		default:
@@ -857,28 +799,21 @@ public class gramRDFLexer extends Lexer {
 				}
 				break;
 			case 8 :
-				// .\\gramRDF.g:1:60: USAR
-				{
-				mUSAR(); 
-
-				}
-				break;
-			case 9 :
-				// .\\gramRDF.g:1:65: CREAR
+				// .\\gramRDF.g:1:60: CREAR
 				{
 				mCREAR(); 
 
 				}
 				break;
-			case 10 :
-				// .\\gramRDF.g:1:71: ID
+			case 9 :
+				// .\\gramRDF.g:1:66: ID
 				{
 				mID(); 
 
 				}
 				break;
-			case 11 :
-				// .\\gramRDF.g:1:74: WS
+			case 10 :
+				// .\\gramRDF.g:1:69: WS
 				{
 				mWS(); 
 

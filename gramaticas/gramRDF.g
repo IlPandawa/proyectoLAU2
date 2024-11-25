@@ -1,10 +1,9 @@
 grammar gramRDF;
 
-inicio: creacion tabla+ cerrar;
+inicio: creacion clase+ cerrar;
 
-// base RDF
-creacion:
-	CREAR ID {
+creacion: 
+    CREAR ID {
         System.out.println("<?xml version=\"1.0\"?>");
         System.out.println();
         System.out.println("<!DOCTYPE rdf:RDF [<!ENTITY xsd \"http://www.w3.org/2001/XMLSchema#\">]>");
@@ -15,38 +14,38 @@ creacion:
         System.out.println("     xmlns:"+$ID.text+"=\"http://www.proyecto.com/"+$ID.text+"#\"");
         System.out.println("     xml:base=\"http://www.proyecto.com/"+$ID.text+"#\">");
         System.out.println();
+        System.out.println("<!-- Clases de la biblioteca -->");
     };
 
-// Definición de clases en RDF
-tabla:
-	TABLA ID INICIO {
-        // Inicio de la definición de la clase en RDF.
-        System.out.println("<!-- Clase: "+$ID.text+" -->");
+clase:
+    TABLA ID inicioPropiedad finPropiedad {
         System.out.println("<rdfs:Class rdf:about=\"http://www.proyecto.com/biblioteca#"+$ID.text+"\"/>");
-    } campo+ FIN {
-        // Finaliza la tabla (no requiere acción adicional en RDF).
     };
 
-// Definición de propiedades RDF
-campo:
-	ID (t = NUMERICO | t = ALFABETICO | t = FECHA) {
+inicioPropiedad:
+    INICIO (propiedad)+;
+
+propiedad:
+    ID t=(NUMERICO|ALFABETICO|FECHA) {
         System.out.println("<!-- Propiedad: "+$ID.text+" -->");
         System.out.println("<rdf:Property rdf:about=\"#"+$ID.text+"\">");
-        System.out.println("    <rdfs:domain rdf:resource=\"#"+$ID.text+"\"/>");
-        
-        // Asignar el rango correcto según el tipo.
-        if (($t.text).compareTo("letras") == 0) {
-            System.out.println("    <rdfs:range rdf:resource=\"&xsd;string\"/>");
-        } else if (($t.text).compareTo("numeros") == 0) {
+        System.out.println("    <rdfs:domain rdf:resource=\"#"+$ID.getText()+"\"/>");
+
+        if ($t.text.equals("numeros")) {
             System.out.println("    <rdfs:range rdf:resource=\"&xsd;integer\"/>");
-        } else if (($t.text).compareTo("fecha") == 0) {
+        } else if ($t.text.equals("letras")) {
+            System.out.println("    <rdfs:range rdf:resource=\"&xsd;string\"/>");
+        } else if ($t.text.equals("fecha")) {
             System.out.println("    <rdfs:range rdf:resource=\"&xsd;date\"/>");
         }
+
         System.out.println("</rdf:Property>");
     };
 
+finPropiedad: FIN;
+
 cerrar:
-	CERRAR {
+    CERRAR {
         System.out.println("</rdf:RDF>");
     };
 
@@ -58,12 +57,6 @@ FECHA: 'fecha';
 TABLA: 'tabla';
 INICIO: 'inicio';
 FIN: 'fin';
-USAR: 'usar';
 CREAR: 'crear';
-ID: ('a' ..'z' | 'A' ..'Z' | '_') (
-		'a' ..'z'
-		| 'A' ..'Z'
-		| '0' ..'9'
-		| '_'
-	)*;
+ID: ('a' .. 'z' | 'A' .. 'Z' | '_') ('a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_')*;
 WS: (' ' | '\n' | '\t' | '\r')+ {$channel=HIDDEN;};

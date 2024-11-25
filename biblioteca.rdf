@@ -10,8 +10,11 @@
 
 <!-- Clases de la biblioteca -->
 <rdfs:Class rdf:about="http://www.proyecto.com/biblioteca#Libro"/>
+</rdfs:Class>
 <rdfs:Class rdf:about="http://www.proyecto.com/biblioteca#Prestamo"/>
+</rdfs:Class>
 <rdfs:Class rdf:about="http://www.proyecto.com/biblioteca#Usuario"/>
+</rdfs:Class>
 
 <!-- Propiedades de la clase Libro -->
 <rdf:Property rdf:about="#codigoLibro">

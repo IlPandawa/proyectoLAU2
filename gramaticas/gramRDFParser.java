@@ -1,4 +1,4 @@
-// $ANTLR 3.5.2 .\\gramRDF.g 2024-11-18 14:51:55
+// $ANTLR 3.5.2 .\\gramRDF.g 2024-11-25 11:28:40
 
 import org.antlr.runtime.*;
 import java.util.Stack;
@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class gramRDFParser extends Parser {
 	public static final String[] tokenNames = new String[] {
 		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "ALFABETICO", "CERRAR", "CREAR", 
-		"FECHA", "FIN", "ID", "INICIO", "NUMERICO", "TABLA", "USAR", "WS"
+		"FECHA", "FIN", "ID", "INICIO", "NUMERICO", "TABLA", "WS"
 	};
 	public static final int EOF=-1;
 	public static final int ALFABETICO=4;
@@ -21,8 +21,7 @@ public class gramRDFParser extends Parser {
 	public static final int INICIO=10;
 	public static final int NUMERICO=11;
 	public static final int TABLA=12;
-	public static final int USAR=13;
-	public static final int WS=14;
+	public static final int WS=13;
 
 	// delegates
 	public Parser[] getDelegates() {
@@ -45,17 +44,17 @@ public class gramRDFParser extends Parser {
 
 
 	// $ANTLR start "inicio"
-	// .\\gramRDF.g:3:1: inicio : creacion ( tabla )+ cerrar ;
+	// .\\gramRDF.g:3:1: inicio : creacion ( clase )+ cerrar ;
 	public final void inicio() throws RecognitionException {
 		try {
-			// .\\gramRDF.g:3:7: ( creacion ( tabla )+ cerrar )
-			// .\\gramRDF.g:3:9: creacion ( tabla )+ cerrar
+			// .\\gramRDF.g:3:7: ( creacion ( clase )+ cerrar )
+			// .\\gramRDF.g:3:9: creacion ( clase )+ cerrar
 			{
 			pushFollow(FOLLOW_creacion_in_inicio9);
 			creacion();
 			state._fsp--;
 
-			// .\\gramRDF.g:3:18: ( tabla )+
+			// .\\gramRDF.g:3:18: ( clase )+
 			int cnt1=0;
 			loop1:
 			while (true) {
@@ -67,10 +66,10 @@ public class gramRDFParser extends Parser {
 
 				switch (alt1) {
 				case 1 :
-					// .\\gramRDF.g:3:18: tabla
+					// .\\gramRDF.g:3:18: clase
 					{
-					pushFollow(FOLLOW_tabla_in_inicio11);
-					tabla();
+					pushFollow(FOLLOW_clase_in_inicio11);
+					clase();
 					state._fsp--;
 
 					}
@@ -104,16 +103,16 @@ public class gramRDFParser extends Parser {
 
 
 	// $ANTLR start "creacion"
-	// .\\gramRDF.g:6:1: creacion : CREAR ID ;
+	// .\\gramRDF.g:5:1: creacion : CREAR ID ;
 	public final void creacion() throws RecognitionException {
 		Token ID1=null;
 
 		try {
-			// .\\gramRDF.g:6:9: ( CREAR ID )
-			// .\\gramRDF.g:7:2: CREAR ID
+			// .\\gramRDF.g:5:9: ( CREAR ID )
+			// .\\gramRDF.g:6:5: CREAR ID
 			{
-			match(input,CREAR,FOLLOW_CREAR_in_creacion23); 
-			ID1=(Token)match(input,ID,FOLLOW_ID_in_creacion25); 
+			match(input,CREAR,FOLLOW_CREAR_in_creacion26); 
+			ID1=(Token)match(input,ID,FOLLOW_ID_in_creacion28); 
 
 			        System.out.println("<?xml version=\"1.0\"?>");
 			        System.out.println();
@@ -125,6 +124,7 @@ public class gramRDFParser extends Parser {
 			        System.out.println("     xmlns:"+(ID1!=null?ID1.getText():null)+"=\"http://www.proyecto.com/"+(ID1!=null?ID1.getText():null)+"#\"");
 			        System.out.println("     xml:base=\"http://www.proyecto.com/"+(ID1!=null?ID1.getText():null)+"#\">");
 			        System.out.println();
+			        System.out.println("<!-- Clases de la biblioteca -->");
 			    
 			}
 
@@ -141,24 +141,52 @@ public class gramRDFParser extends Parser {
 
 
 
-	// $ANTLR start "tabla"
-	// .\\gramRDF.g:21:1: tabla : TABLA ID INICIO ( campo )+ FIN ;
-	public final void tabla() throws RecognitionException {
+	// $ANTLR start "clase"
+	// .\\gramRDF.g:20:1: clase : TABLA ID inicioPropiedad finPropiedad ;
+	public final void clase() throws RecognitionException {
 		Token ID2=null;
 
 		try {
-			// .\\gramRDF.g:21:6: ( TABLA ID INICIO ( campo )+ FIN )
-			// .\\gramRDF.g:22:2: TABLA ID INICIO ( campo )+ FIN
+			// .\\gramRDF.g:20:6: ( TABLA ID inicioPropiedad finPropiedad )
+			// .\\gramRDF.g:21:5: TABLA ID inicioPropiedad finPropiedad
 			{
-			match(input,TABLA,FOLLOW_TABLA_in_tabla36); 
-			ID2=(Token)match(input,ID,FOLLOW_ID_in_tabla38); 
-			match(input,INICIO,FOLLOW_INICIO_in_tabla40); 
+			match(input,TABLA,FOLLOW_TABLA_in_clase41); 
+			ID2=(Token)match(input,ID,FOLLOW_ID_in_clase43); 
+			pushFollow(FOLLOW_inicioPropiedad_in_clase45);
+			inicioPropiedad();
+			state._fsp--;
 
-			        // Inicio de la definición de la clase en RDF.
-			        System.out.println("<!-- Clase: "+(ID2!=null?ID2.getText():null)+" -->");
+			pushFollow(FOLLOW_finPropiedad_in_clase47);
+			finPropiedad();
+			state._fsp--;
+
+
 			        System.out.println("<rdfs:Class rdf:about=\"http://www.proyecto.com/biblioteca#"+(ID2!=null?ID2.getText():null)+"\"/>");
 			    
-			// .\\gramRDF.g:26:7: ( campo )+
+			}
+
+		}
+		catch (RecognitionException re) {
+			reportError(re);
+			recover(input,re);
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "clase"
+
+
+
+	// $ANTLR start "inicioPropiedad"
+	// .\\gramRDF.g:25:1: inicioPropiedad : INICIO ( propiedad )+ ;
+	public final void inicioPropiedad() throws RecognitionException {
+		try {
+			// .\\gramRDF.g:25:16: ( INICIO ( propiedad )+ )
+			// .\\gramRDF.g:26:5: INICIO ( propiedad )+
+			{
+			match(input,INICIO,FOLLOW_INICIO_in_inicioPropiedad60); 
+			// .\\gramRDF.g:26:12: ( propiedad )+
 			int cnt2=0;
 			loop2:
 			while (true) {
@@ -170,10 +198,10 @@ public class gramRDFParser extends Parser {
 
 				switch (alt2) {
 				case 1 :
-					// .\\gramRDF.g:26:7: campo
+					// .\\gramRDF.g:26:13: propiedad
 					{
-					pushFollow(FOLLOW_campo_in_tabla44);
-					campo();
+					pushFollow(FOLLOW_propiedad_in_inicioPropiedad63);
+					propiedad();
 					state._fsp--;
 
 					}
@@ -187,10 +215,6 @@ public class gramRDFParser extends Parser {
 				cnt2++;
 			}
 
-			match(input,FIN,FOLLOW_FIN_in_tabla47); 
-
-			        // Finaliza la tabla (no requiere acción adicional en RDF).
-			    
 			}
 
 		}
@@ -202,79 +226,43 @@ public class gramRDFParser extends Parser {
 			// do for sure before leaving
 		}
 	}
-	// $ANTLR end "tabla"
+	// $ANTLR end "inicioPropiedad"
 
 
 
-	// $ANTLR start "campo"
-	// .\\gramRDF.g:31:1: campo : ID (t= NUMERICO |t= ALFABETICO |t= FECHA ) ;
-	public final void campo() throws RecognitionException {
+	// $ANTLR start "propiedad"
+	// .\\gramRDF.g:28:1: propiedad : ID t= ( NUMERICO | ALFABETICO | FECHA ) ;
+	public final void propiedad() throws RecognitionException {
 		Token t=null;
 		Token ID3=null;
 
 		try {
-			// .\\gramRDF.g:31:6: ( ID (t= NUMERICO |t= ALFABETICO |t= FECHA ) )
-			// .\\gramRDF.g:32:2: ID (t= NUMERICO |t= ALFABETICO |t= FECHA )
+			// .\\gramRDF.g:28:10: ( ID t= ( NUMERICO | ALFABETICO | FECHA ) )
+			// .\\gramRDF.g:29:5: ID t= ( NUMERICO | ALFABETICO | FECHA )
 			{
-			ID3=(Token)match(input,ID,FOLLOW_ID_in_campo58); 
-			// .\\gramRDF.g:32:5: (t= NUMERICO |t= ALFABETICO |t= FECHA )
-			int alt3=3;
-			switch ( input.LA(1) ) {
-			case NUMERICO:
-				{
-				alt3=1;
-				}
-				break;
-			case ALFABETICO:
-				{
-				alt3=2;
-				}
-				break;
-			case FECHA:
-				{
-				alt3=3;
-				}
-				break;
-			default:
-				NoViableAltException nvae =
-					new NoViableAltException("", 3, 0, input);
-				throw nvae;
+			ID3=(Token)match(input,ID,FOLLOW_ID_in_propiedad76); 
+			t=input.LT(1);
+			if ( input.LA(1)==ALFABETICO||input.LA(1)==FECHA||input.LA(1)==NUMERICO ) {
+				input.consume();
+				state.errorRecovery=false;
 			}
-			switch (alt3) {
-				case 1 :
-					// .\\gramRDF.g:32:6: t= NUMERICO
-					{
-					t=(Token)match(input,NUMERICO,FOLLOW_NUMERICO_in_campo65); 
-					}
-					break;
-				case 2 :
-					// .\\gramRDF.g:32:21: t= ALFABETICO
-					{
-					t=(Token)match(input,ALFABETICO,FOLLOW_ALFABETICO_in_campo73); 
-					}
-					break;
-				case 3 :
-					// .\\gramRDF.g:32:38: t= FECHA
-					{
-					t=(Token)match(input,FECHA,FOLLOW_FECHA_in_campo81); 
-					}
-					break;
-
+			else {
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				throw mse;
 			}
-
 
 			        System.out.println("<!-- Propiedad: "+(ID3!=null?ID3.getText():null)+" -->");
 			        System.out.println("<rdf:Property rdf:about=\"#"+(ID3!=null?ID3.getText():null)+"\">");
-			        System.out.println("    <rdfs:domain rdf:resource=\"#"+(ID3!=null?ID3.getText():null)+"\"/>");
-			        
-			        // Asignar el rango correcto según el tipo.
-			        if (((t!=null?t.getText():null)).compareTo("letras") == 0) {
-			            System.out.println("    <rdfs:range rdf:resource=\"&xsd;string\"/>");
-			        } else if (((t!=null?t.getText():null)).compareTo("numeros") == 0) {
+			        System.out.println("    <rdfs:domain rdf:resource=\"#"+ID3.getText()+"\"/>");
+
+			        if ((t!=null?t.getText():null).equals("numeros")) {
 			            System.out.println("    <rdfs:range rdf:resource=\"&xsd;integer\"/>");
-			        } else if (((t!=null?t.getText():null)).compareTo("fecha") == 0) {
+			        } else if ((t!=null?t.getText():null).equals("letras")) {
+			            System.out.println("    <rdfs:range rdf:resource=\"&xsd;string\"/>");
+			        } else if ((t!=null?t.getText():null).equals("fecha")) {
 			            System.out.println("    <rdfs:range rdf:resource=\"&xsd;date\"/>");
 			        }
+
 			        System.out.println("</rdf:Property>");
 			    
 			}
@@ -288,18 +276,41 @@ public class gramRDFParser extends Parser {
 			// do for sure before leaving
 		}
 	}
-	// $ANTLR end "campo"
+	// $ANTLR end "propiedad"
+
+
+
+	// $ANTLR start "finPropiedad"
+	// .\\gramRDF.g:45:1: finPropiedad : FIN ;
+	public final void finPropiedad() throws RecognitionException {
+		try {
+			// .\\gramRDF.g:45:13: ( FIN )
+			// .\\gramRDF.g:45:15: FIN
+			{
+			match(input,FIN,FOLLOW_FIN_in_finPropiedad95); 
+			}
+
+		}
+		catch (RecognitionException re) {
+			reportError(re);
+			recover(input,re);
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "finPropiedad"
 
 
 
 	// $ANTLR start "cerrar"
-	// .\\gramRDF.g:48:1: cerrar : CERRAR ;
+	// .\\gramRDF.g:47:1: cerrar : CERRAR ;
 	public final void cerrar() throws RecognitionException {
 		try {
-			// .\\gramRDF.g:48:7: ( CERRAR )
-			// .\\gramRDF.g:49:2: CERRAR
+			// .\\gramRDF.g:47:7: ( CERRAR )
+			// .\\gramRDF.g:48:5: CERRAR
 			{
-			match(input,CERRAR,FOLLOW_CERRAR_in_cerrar92); 
+			match(input,CERRAR,FOLLOW_CERRAR_in_cerrar106); 
 
 			        System.out.println("</rdf:RDF>");
 			    
@@ -321,18 +332,18 @@ public class gramRDFParser extends Parser {
 
 
 	public static final BitSet FOLLOW_creacion_in_inicio9 = new BitSet(new long[]{0x0000000000001000L});
-	public static final BitSet FOLLOW_tabla_in_inicio11 = new BitSet(new long[]{0x0000000000001020L});
+	public static final BitSet FOLLOW_clase_in_inicio11 = new BitSet(new long[]{0x0000000000001020L});
 	public static final BitSet FOLLOW_cerrar_in_inicio14 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_CREAR_in_creacion23 = new BitSet(new long[]{0x0000000000000200L});
-	public static final BitSet FOLLOW_ID_in_creacion25 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_TABLA_in_tabla36 = new BitSet(new long[]{0x0000000000000200L});
-	public static final BitSet FOLLOW_ID_in_tabla38 = new BitSet(new long[]{0x0000000000000400L});
-	public static final BitSet FOLLOW_INICIO_in_tabla40 = new BitSet(new long[]{0x0000000000000200L});
-	public static final BitSet FOLLOW_campo_in_tabla44 = new BitSet(new long[]{0x0000000000000300L});
-	public static final BitSet FOLLOW_FIN_in_tabla47 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_campo58 = new BitSet(new long[]{0x0000000000000890L});
-	public static final BitSet FOLLOW_NUMERICO_in_campo65 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ALFABETICO_in_campo73 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_FECHA_in_campo81 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_CERRAR_in_cerrar92 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_CREAR_in_creacion26 = new BitSet(new long[]{0x0000000000000200L});
+	public static final BitSet FOLLOW_ID_in_creacion28 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_TABLA_in_clase41 = new BitSet(new long[]{0x0000000000000200L});
+	public static final BitSet FOLLOW_ID_in_clase43 = new BitSet(new long[]{0x0000000000000400L});
+	public static final BitSet FOLLOW_inicioPropiedad_in_clase45 = new BitSet(new long[]{0x0000000000000100L});
+	public static final BitSet FOLLOW_finPropiedad_in_clase47 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_INICIO_in_inicioPropiedad60 = new BitSet(new long[]{0x0000000000000200L});
+	public static final BitSet FOLLOW_propiedad_in_inicioPropiedad63 = new BitSet(new long[]{0x0000000000000202L});
+	public static final BitSet FOLLOW_ID_in_propiedad76 = new BitSet(new long[]{0x0000000000000890L});
+	public static final BitSet FOLLOW_set_in_propiedad80 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_FIN_in_finPropiedad95 = new BitSet(new long[]{0x0000000000000002L});
+	public static final BitSet FOLLOW_CERRAR_in_cerrar106 = new BitSet(new long[]{0x0000000000000002L});
 }

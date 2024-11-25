@@ -31,4 +31,4 @@ tabla prestamo
         fechaMaxima fecha
         fechaDevolucion fecha
     fin    
-cerrar    
+cerrar
