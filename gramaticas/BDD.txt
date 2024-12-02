@@ -1,5 +1,5 @@
 crear biblioteca
-tabla libro
+tabla Libro
     inicio
         codigoLibro numeros
         nombreLibro letras
@@ -11,7 +11,7 @@ tabla libro
         anioEdicion fecha
         precio numeros
     fin
-tabla usuario
+tabla Usuario
     inicio
         codigoUsuario numeros
         nombre letras
@@ -22,13 +22,13 @@ tabla usuario
         municipio letras
         fechaNacimiento fecha
     fin
-tabla prestamo
+tabla Prestamo
     inicio
         numeroPedido numeros
-        codigoLibro numeros
-        codigoUsuario numeros
         fechaSalida fecha
+        codigoLibro numeros
         fechaMaxima fecha
+        codigoUsuario numeros
         fechaDevolucion fecha
     fin    
 cerrar
